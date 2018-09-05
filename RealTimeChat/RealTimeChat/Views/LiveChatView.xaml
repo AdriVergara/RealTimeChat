@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RealTimeChat.Views.LiveChatView">
+    <StackLayout>
+
+        <ListView x:Name="MyListView" ItemsSource="{Binding MessagesList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+
+                    <TextCell Text="{Binding Title}" />
+
+                    <!--<Label Text="{Binding Title}"/>-->
+                    <!--<TextCell Text="{Binding Title}" />-->
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackLayout Orientation="Horizontal">
+            <Entry Text="{Binding MessageText}" TextColor="Gray" VerticalOptions="End" HorizontalOptions="StartAndExpand" WidthRequest="200"/>
+            <Button Text="Update" Command="{Binding UpdateChat}" />
+            <Button Text="Send" Command="{Binding SendMessageToChat}" />
+        </StackLayout>
+        
+    </StackLayout>
+</ContentPage>

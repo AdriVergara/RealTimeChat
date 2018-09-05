@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "456078201108",
+    "firebase_url": "https://realtimechat-b2228.firebaseio.com",
+    "project_id": "realtimechat-b2228",
+    "storage_bucket": "realtimechat-b2228.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456078201108:android:efdc8e43870fc5c0",
+        "android_client_info": {
+          "package_name": "com.companyname.RealTimeChat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "456078201108-kn7gmpbma622trnicc8ea50m07t9bu8j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVwCy2YJOQubAExH92tIWHCT94r6QUpNQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
