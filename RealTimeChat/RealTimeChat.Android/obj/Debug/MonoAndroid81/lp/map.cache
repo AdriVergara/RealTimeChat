@@ -1,11 +1,11 @@
-RealTimeChat
-System.Runtime
 FormsViewGroup
 Newtonsoft.Json
 Plugin.FirebasePushNotification.Abstractions
 Plugin.FirebasePushNotification
+RealTimeChat
 System.Net.Http.Extensions
 System.Net.Http.Primitives
+System.Runtime
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Lifecycle.Common
 Xamarin.Android.Arch.Lifecycle.Runtime
@@ -34,3 +34,4 @@ Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
 Xamarin.GooglePlayServices.Basement
 Xamarin.GooglePlayServices.Tasks
+netstandard

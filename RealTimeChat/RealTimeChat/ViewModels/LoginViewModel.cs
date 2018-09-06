@@ -4,6 +4,7 @@ using RealTimeChat.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,18 +13,39 @@ using Xamarin.Forms;
 
 namespace RealTimeChat.ViewModels
 {
-    public class LoginViewModel
+    public class LoginViewModel : INotifyPropertyChanged
     {
-        
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
         public INavigation NavigationService { get; set; }
 
         public ICommand ConfirmUser { get; set; }
 
-        public ObservableCollection<UserModel> UsersList;
+        private ObservableCollection<UserModel> _usersList;
+        public ObservableCollection<UserModel> UsersList
+        {
+            get
+            {
+                return _usersList;
+            }
+            set
+            {
+                if (_usersList == value) return;
+                _usersList = value;
+                OnPropertyChanged(nameof(UsersList));
+            }
+        }
+
 
         public string UserName { get; set; }
         public string Password { get; set; }
+
+        public UserModel selectedIt { get; set; }
 
         public LoginViewModel(INavigation _navigationService)
         {
@@ -54,7 +76,6 @@ namespace RealTimeChat.ViewModels
                 Password = "Adri"
             };
 
-
             UserModel User2 = new UserModel
             {
                 Id = 1,
@@ -70,16 +91,17 @@ namespace RealTimeChat.ViewModels
         {
             UserModel us = new UserModel();
 
-            //if (UserName == "Adri")
-            //{
-            //    us = UsersList[0];
-            //}
-            //else if(UserName == "Andreu")
-            //{
-            //    us = UsersList[1];
-            //}
+            if (selectedIt.UserName == "Adri")
+            {
+                us = UsersList[0];
+            }
+            else if (selectedIt.UserName == "Andreu")
+            {
+                us = UsersList[1];
+            }
 
-            await NavigationService.PushAsync(new LiveChatView(NavigationService, us, UsersList));
+            //await NavigationService.PushAsync(new LiveChatView(NavigationService, us, UsersList));
+            await NavigationService.PushAsync(new LiveChatView(NavigationService, selectedIt, UsersList));
         }
     }
 }

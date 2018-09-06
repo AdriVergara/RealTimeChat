@@ -1,17 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Converters="clr-namespace:RealTimeChat.ViewModels.Converters"
              x:Class="RealTimeChat.Views.LiveChatView">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Converters:MessageOwnerConverter x:Key="ownerCnv"></Converters:MessageOwnerConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <StackLayout>
 
-        <ListView x:Name="MyListView" ItemsSource="{Binding MessagesList}">
+        <Label x:Name="val" Text="{Binding User.UserName}" IsVisible="False"/>
+        
+        <ListView x:Name="MyListView" ItemsSource="{Binding MessagesList}" RowHeight="50">
             <ListView.ItemTemplate>
                 <DataTemplate>
 
-                    <TextCell Text="{Binding Title}" />
+                    <ViewCell Height="100">
+                        <StackLayout Orientation="Vertical" Margin="5">
 
-                    <!--<Label Text="{Binding Title}"/>-->
-                    <!--<TextCell Text="{Binding Title}" />-->
+                            <Label Text="{Binding Title}" HorizontalOptions="{Binding MessageOwner, Converter={StaticResource ownerCnv}, ConverterParameter={x:Reference Name=val}}"/>
+                            <Label Text="{Binding MessageOwner}" TextColor="Gray" HorizontalOptions="{Binding MessageOwner, Converter={StaticResource ownerCnv}, ConverterParameter={x:Reference Name=val}}"/>
+                            <!--<Label Text="suu" HorizontalOptions="End"/>-->
+                            <!--<Label Text="dsafvgdf" HorizontalOptions="{Binding MessageOwner, Converter={StaticResource ownerCnv}}" />-->
+                        </StackLayout>
+                    </ViewCell>
+                    
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

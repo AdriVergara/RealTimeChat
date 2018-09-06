@@ -2,16 +2,27 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RealTimeChat.Views.LoginView">
+    
       <StackLayout Margin="10">
-        <StackLayout Orientation="Horizontal" Margin="5" HorizontalOptions="Center">
-            <Label Text="Name" VerticalOptions="Center"/>
-            <Entry Text="{Binding UserName}" VerticalOptions="Center" WidthRequest="50"/>
-        </StackLayout>
-        <StackLayout Orientation="Horizontal" Margin="5" HorizontalOptions="Center">
-            <Label Text="Password" VerticalOptions="Center"/>
-            <Entry Text="{Binding Password}" VerticalOptions="Center" WidthRequest="50"/>
-        </StackLayout>
 
-        <Button Text="Confirm" Command="{Binding ConfirmUser}"/>
-    </StackLayout>
+          <!--<StackLayout Orientation="Vertical" Margin="20" HorizontalOptions="Center">
+              
+              <StackLayout Orientation="Horizontal" Margin="5" HorizontalOptions="Center">
+                <Label Text="Name" VerticalOptions="Center" HorizontalOptions="Start"/>
+                <Entry Text="{Binding UserName}" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="100"/>
+              </StackLayout>
+          
+              <StackLayout Orientation="Horizontal" Margin="5" HorizontalOptions="Center">
+                <Label Text="Password" VerticalOptions="Center" HorizontalOptions="Start"/>
+                <Entry Text="{Binding Password}" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="100"/>
+              </StackLayout>
+              
+          </StackLayout>-->
+
+            <Picker Title="User Name" ItemsSource="{Binding UsersList}" ItemDisplayBinding="{Binding UserName}" SelectedItem="{Binding selectedIt}"/>
+
+        <Button Text="Confirm" Command="{Binding ConfirmUser}" WidthRequest="200"/>
+          
+      </StackLayout>
+    
 </ContentPage>
