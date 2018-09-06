@@ -8,5 +8,6 @@ namespace RealTimeChat.Models
     {
         //public int Id { get; set; }
         public string Title { get; set; }
+        public string MessageOwner { get; set; }
     }
 }
