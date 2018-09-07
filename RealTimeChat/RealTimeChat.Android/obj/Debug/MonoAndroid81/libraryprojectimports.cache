@@ -22,8 +22,10 @@
     <Jar>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\27\jl\classes.jar</Jar>
     <Jar>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\28\jl\classes.jar</Jar>
     <Jar>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\29\jl\classes.jar</Jar>
-    <Jar>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\34\jl\classes.jar</Jar>
-    <Jar>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\35\jl\classes.jar</Jar>
+    <Jar>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\30\jl\classes.jar</Jar>
+    <Jar>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\31\jl\classes.jar</Jar>
+    <Jar>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\36\jl\classes.jar</Jar>
+    <Jar>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\37\jl\classes.jar</Jar>
     <Jar>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\8\jl\arch-core-common.jar</Jar>
     <Jar>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\9\jl\arch-lifecycle-common.jar</Jar>
   </Jars>
@@ -37,8 +39,8 @@
     <ResolvedResourceDirectory>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\22\jl\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\23\jl\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\25\jl\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\29\jl\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\34\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\31\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\36\jl\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
     <ResolvedAssetDirectory>obj\\Debug\MonoAndroid81\lp\20\jl\assets</ResolvedAssetDirectory>
@@ -54,7 +56,7 @@
     <ResolvedResourceDirectoryStamp>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\22.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\23.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\25.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\29.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\34.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\31.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\lp\36.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>

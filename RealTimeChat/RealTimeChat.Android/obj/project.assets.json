@@ -399,6 +399,41 @@
           "build/Xamarin.Build.Download.targets": {}
         }
       },
+      "Xamarin.Firebase.Analytics/60.1142.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Firebase.Analytics.Impl": "[60.1142.1]",
+          "Xamarin.Firebase.Common": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.1]"
+        },
+        "compile": {
+          "lib/MonoAndroid80/Xamarin.Firebase.Analytics.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid80/Xamarin.Firebase.Analytics.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid80/Xamarin.Firebase.Analytics.targets": {}
+        }
+      },
+      "Xamarin.Firebase.Analytics.Impl/60.1142.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Firebase.Common": "[60.1142.1]",
+          "Xamarin.Firebase.Iid": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.1]",
+          "Xamarin.GooglePlayServices.Tasks": "[60.1142.1]"
+        },
+        "compile": {
+          "lib/MonoAndroid80/Xamarin.Firebase.Analytics.Impl.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid80/Xamarin.Firebase.Analytics.Impl.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid80/Xamarin.Firebase.Analytics.Impl.targets": {}
+        }
+      },
       "Xamarin.Firebase.Common/60.1142.1": {
         "type": "package",
         "dependencies": {
@@ -413,6 +448,12 @@
         },
         "build": {
           "build/MonoAndroid80/Xamarin.Firebase.Common.targets": {}
+        }
+      },
+      "Xamarin.Firebase.Core/60.1142.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Firebase.Analytics": "[60.1142.1]"
         }
       },
       "Xamarin.Firebase.Iid/60.1142.1": {
@@ -519,6 +560,7 @@
           "Newtonsoft.Json": "11.0.2",
           "Plugin.FirebasePushNotification": "2.3.5",
           "System.Net.Http": "4.3.3",
+          "Xamarin.Firebase.Core": "60.1142.1",
           "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
@@ -1075,6 +1117,28 @@
         "xamarin.build.download.nuspec"
       ]
     },
+    "Xamarin.Firebase.Analytics/60.1142.1": {
+      "sha512": "5TAMIbmWQdmASIs5WyAVBa2sSSsMYwitaB4Zqk/PYBSHuaLGajl7vesVg1cur8sKMRvW9Hzt35mWB6w3gQEKdg==",
+      "type": "package",
+      "path": "xamarin.firebase.analytics/60.1142.1",
+      "files": [
+        "build/MonoAndroid80/Xamarin.Firebase.Analytics.targets",
+        "lib/MonoAndroid80/Xamarin.Firebase.Analytics.dll",
+        "xamarin.firebase.analytics.60.1142.1.nupkg.sha512",
+        "xamarin.firebase.analytics.nuspec"
+      ]
+    },
+    "Xamarin.Firebase.Analytics.Impl/60.1142.1": {
+      "sha512": "u4hd6BH05Quv3OJ3yflwo9VcFqSt/gy+d26whLdPQSr76wFA8SxrPxxOBsQ75Dn4yaH9ZnJ0eGxiJLh0R7BPEA==",
+      "type": "package",
+      "path": "xamarin.firebase.analytics.impl/60.1142.1",
+      "files": [
+        "build/MonoAndroid80/Xamarin.Firebase.Analytics.Impl.targets",
+        "lib/MonoAndroid80/Xamarin.Firebase.Analytics.Impl.dll",
+        "xamarin.firebase.analytics.impl.60.1142.1.nupkg.sha512",
+        "xamarin.firebase.analytics.impl.nuspec"
+      ]
+    },
     "Xamarin.Firebase.Common/60.1142.1": {
       "sha512": "lBkdcgaqAvAkkkBzZGvYviGl3C7J4n2B3CXY3izVR7M1xPZ6Q9scrm0tZJMwwEP+/z3qqZRL/DBVH1dNChGJ4A==",
       "type": "package",
@@ -1084,6 +1148,15 @@
         "lib/MonoAndroid80/Xamarin.Firebase.Common.dll",
         "xamarin.firebase.common.60.1142.1.nupkg.sha512",
         "xamarin.firebase.common.nuspec"
+      ]
+    },
+    "Xamarin.Firebase.Core/60.1142.1": {
+      "sha512": "dXGjtHNv17haUk3XjliKXYraHTjO29dmfvjKLpnobZh+UY09QxmHPdcMNxDgtMqxFiV2Roikr05XwCzhl/0GpA==",
+      "type": "package",
+      "path": "xamarin.firebase.core/60.1142.1",
+      "files": [
+        "xamarin.firebase.core.60.1142.1.nupkg.sha512",
+        "xamarin.firebase.core.nuspec"
       ]
     },
     "Xamarin.Firebase.Iid/60.1142.1": {
@@ -1301,6 +1374,7 @@
       "Xamarin.Android.Support.v7.AppCompat >= 27.0.2.1",
       "Xamarin.Android.Support.v7.CardView >= 27.0.2.1",
       "Xamarin.Android.Support.v7.MediaRouter >= 27.0.2.1",
+      "Xamarin.Firebase.Core >= 60.1142.1",
       "Xamarin.Forms >= 3.1.0.697729"
     ]
   },
@@ -1376,6 +1450,10 @@
           "Xamarin.Android.Support.v7.MediaRouter": {
             "target": "Package",
             "version": "[27.0.2.1, )"
+          },
+          "Xamarin.Firebase.Core": {
+            "target": "Package",
+            "version": "[60.1142.1, )"
           },
           "Xamarin.Forms": {
             "target": "Package",

@@ -30,5 +30,7 @@
     <Import Project="$(NuGetPackageRoot)xamarin.firebase.common\60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Common.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.firebase.common\60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Common.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.firebase.iid\60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Iid.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.firebase.iid\60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Iid.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.firebase.messaging\60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Messaging.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.firebase.messaging\60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Messaging.targets')" />
+    <Import Project="$(NuGetPackageRoot)xamarin.firebase.analytics.impl\60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Analytics.Impl.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.firebase.analytics.impl\60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Analytics.Impl.targets')" />
+    <Import Project="$(NuGetPackageRoot)xamarin.firebase.analytics\60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Analytics.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.firebase.analytics\60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Analytics.targets')" />
   </ImportGroup>
 </Project>

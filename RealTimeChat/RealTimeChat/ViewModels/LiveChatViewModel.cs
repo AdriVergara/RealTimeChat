@@ -143,26 +143,12 @@ namespace RealTimeChat.ViewModels
 
             ExecuteUpdateChat();
 
-            CheckOwners();
-
             UsersList = _usersList;
 
             NavigationService = _navigationService;
 
             SendMessageToChat = new Command(async () => await ExecuteSendMessageToChat());
             UpdateChat = new Command(async () => await ExecuteUpdateChat());
-        }
-
-        private void CheckOwners()
-        {
-            if (MessageOwner == User.UserName)
-            {
-                StartOrEnd = "End";
-            }
-            else
-            {
-                StartOrEnd = "Start";
-            }
         }
 
         //Refresh the chat depending on the api messages (to show the received messages), push to api and refresh the chat view

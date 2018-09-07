@@ -133,6 +133,8 @@ class MonoPackageManager_Resources {
 		"Xamarin.Android.Support.v7.Palette.dll",
 		"Xamarin.Android.Support.v7.RecyclerView.dll",
 		"Xamarin.Android.Support.Vector.Drawable.dll",
+		"Xamarin.Firebase.Analytics.dll",
+		"Xamarin.Firebase.Analytics.Impl.dll",
 		"Xamarin.Firebase.Common.dll",
 		"Xamarin.Firebase.Iid.dll",
 		"Xamarin.Firebase.Messaging.dll",
