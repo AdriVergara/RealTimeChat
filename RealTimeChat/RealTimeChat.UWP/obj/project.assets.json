@@ -1040,6 +1040,9 @@
           "lib/win8/_._": {}
         }
       },
+      "Xamarin.Firebase.Core/60.1142.1": {
+        "type": "package"
+      },
       "Xamarin.Forms/3.1.0.697729": {
         "type": "package",
         "dependencies": {
@@ -1071,6 +1074,7 @@
           "Newtonsoft.Json": "11.0.2",
           "Plugin.FirebasePushNotification": "2.3.5",
           "System.Net.Http": "4.3.3",
+          "Xamarin.Firebase.Core": "60.1142.1",
           "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
@@ -2468,6 +2472,9 @@
           "lib/win8/_._": {}
         }
       },
+      "Xamarin.Firebase.Core/60.1142.1": {
+        "type": "package"
+      },
       "Xamarin.Forms/3.1.0.697729": {
         "type": "package",
         "dependencies": {
@@ -2499,6 +2506,7 @@
           "Newtonsoft.Json": "11.0.2",
           "Plugin.FirebasePushNotification": "2.3.5",
           "System.Net.Http": "4.3.3",
+          "Xamarin.Firebase.Core": "60.1142.1",
           "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
@@ -3995,6 +4003,9 @@
           "lib/win8/_._": {}
         }
       },
+      "Xamarin.Firebase.Core/60.1142.1": {
+        "type": "package"
+      },
       "Xamarin.Forms/3.1.0.697729": {
         "type": "package",
         "dependencies": {
@@ -4026,6 +4037,7 @@
           "Newtonsoft.Json": "11.0.2",
           "Plugin.FirebasePushNotification": "2.3.5",
           "System.Net.Http": "4.3.3",
+          "Xamarin.Firebase.Core": "60.1142.1",
           "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
@@ -5248,6 +5260,9 @@
           "lib/win8/_._": {}
         }
       },
+      "Xamarin.Firebase.Core/60.1142.1": {
+        "type": "package"
+      },
       "Xamarin.Forms/3.1.0.697729": {
         "type": "package",
         "dependencies": {
@@ -5279,6 +5294,7 @@
           "Newtonsoft.Json": "11.0.2",
           "Plugin.FirebasePushNotification": "2.3.5",
           "System.Net.Http": "4.3.3",
+          "Xamarin.Firebase.Core": "60.1142.1",
           "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
@@ -6676,6 +6692,9 @@
           "lib/win8/_._": {}
         }
       },
+      "Xamarin.Firebase.Core/60.1142.1": {
+        "type": "package"
+      },
       "Xamarin.Forms/3.1.0.697729": {
         "type": "package",
         "dependencies": {
@@ -6707,6 +6726,7 @@
           "Newtonsoft.Json": "11.0.2",
           "Plugin.FirebasePushNotification": "2.3.5",
           "System.Net.Http": "4.3.3",
+          "Xamarin.Firebase.Core": "60.1142.1",
           "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
@@ -8203,6 +8223,9 @@
           "lib/win8/_._": {}
         }
       },
+      "Xamarin.Firebase.Core/60.1142.1": {
+        "type": "package"
+      },
       "Xamarin.Forms/3.1.0.697729": {
         "type": "package",
         "dependencies": {
@@ -8234,6 +8257,7 @@
           "Newtonsoft.Json": "11.0.2",
           "Plugin.FirebasePushNotification": "2.3.5",
           "System.Net.Http": "4.3.3",
+          "Xamarin.Firebase.Core": "60.1142.1",
           "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
@@ -9631,6 +9655,9 @@
           "lib/win8/_._": {}
         }
       },
+      "Xamarin.Firebase.Core/60.1142.1": {
+        "type": "package"
+      },
       "Xamarin.Forms/3.1.0.697729": {
         "type": "package",
         "dependencies": {
@@ -9662,6 +9689,7 @@
           "Newtonsoft.Json": "11.0.2",
           "Plugin.FirebasePushNotification": "2.3.5",
           "System.Net.Http": "4.3.3",
+          "Xamarin.Firebase.Core": "60.1142.1",
           "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
@@ -11158,6 +11186,9 @@
           "lib/win8/_._": {}
         }
       },
+      "Xamarin.Firebase.Core/60.1142.1": {
+        "type": "package"
+      },
       "Xamarin.Forms/3.1.0.697729": {
         "type": "package",
         "dependencies": {
@@ -11189,6 +11220,7 @@
           "Newtonsoft.Json": "11.0.2",
           "Plugin.FirebasePushNotification": "2.3.5",
           "System.Net.Http": "4.3.3",
+          "Xamarin.Firebase.Core": "60.1142.1",
           "Xamarin.Forms": "3.1.0.697729"
         },
         "compile": {
@@ -17998,6 +18030,15 @@
         "system.threading.tasks.nuspec"
       ]
     },
+    "Xamarin.Firebase.Core/60.1142.1": {
+      "sha512": "dXGjtHNv17haUk3XjliKXYraHTjO29dmfvjKLpnobZh+UY09QxmHPdcMNxDgtMqxFiV2Roikr05XwCzhl/0GpA==",
+      "type": "package",
+      "path": "xamarin.firebase.core/60.1142.1",
+      "files": [
+        "xamarin.firebase.core.60.1142.1.nupkg.sha512",
+        "xamarin.firebase.core.nuspec"
+      ]
+    },
     "Xamarin.Forms/3.1.0.697729": {
       "sha512": "YlFOM9u8onIRxJwYJ3l+O0wFKqzzrDjDrgnoBr1rct+eaQKU77vFydxvTP+WxYlYzR14hYvyLNC65L84+6ke6w==",
       "type": "package",
@@ -18164,6 +18205,7 @@
       "Plugin.FirebasePushNotification >= 2.3.5",
       "RealTimeChat >= 1.0.0",
       "System.Net.Http >= 4.3.3",
+      "Xamarin.Firebase.Core >= 60.1142.1",
       "Xamarin.Forms >= 3.1.0.697729"
     ]
   },
@@ -18227,6 +18269,10 @@
           "System.Net.Http": {
             "target": "Package",
             "version": "[4.3.3, )"
+          },
+          "Xamarin.Firebase.Core": {
+            "target": "Package",
+            "version": "[60.1142.1, )"
           },
           "Xamarin.Forms": {
             "target": "Package",

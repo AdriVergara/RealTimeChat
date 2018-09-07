@@ -33,6 +33,8 @@ C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Andr
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Android.Support.v7.Palette.dll
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Android.Support.v7.RecyclerView.dll
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Android.Support.Vector.Drawable.dll
+C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Firebase.Analytics.dll
+C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Firebase.Analytics.Impl.dll
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Firebase.Common.dll
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Firebase.Iid.dll
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Firebase.Messaging.dll

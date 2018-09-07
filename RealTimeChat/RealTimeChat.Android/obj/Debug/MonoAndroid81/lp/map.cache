@@ -25,6 +25,8 @@ Xamarin.Android.Support.v7.MediaRouter
 Xamarin.Android.Support.v7.Palette
 Xamarin.Android.Support.v7.RecyclerView
 Xamarin.Android.Support.Vector.Drawable
+Xamarin.Firebase.Analytics
+Xamarin.Firebase.Analytics.Impl
 Xamarin.Firebase.Common
 Xamarin.Firebase.Iid
 Xamarin.Firebase.Messaging
