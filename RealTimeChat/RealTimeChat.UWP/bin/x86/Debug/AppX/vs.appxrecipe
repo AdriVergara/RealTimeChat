@@ -31,13 +31,85 @@
     <AppXManifest Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-07T06:52:55.547</Modified>
+      <Modified>2018-09-12T14:51:45.989</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\bin\x86\Debug\RealTimeChat.UWP.exe">
       <PackagePath>entrypoint\RealTimeChat.UWP.exe</PackagePath>
-      <Modified>2018-09-07T06:52:37.164</Modified>
+      <Modified>2018-09-12T14:51:44.802</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\aguacongas.firebase\2.1.0\lib\netstandard2.0\Aguacongas.Firebase.dll">
+      <PackagePath>Aguacongas.Firebase.dll</PackagePath>
+      <Modified>2018-07-27T23:50:30.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\aguacongas.firebase.authentication\2.1.0\lib\netstandard2.0\Aguacongas.Firebase.Authentication.dll">
+      <PackagePath>Aguacongas.Firebase.Authentication.dll</PackagePath>
+      <Modified>2018-07-27T23:50:30.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\firebase.database\1.0.0\lib\portable45-net45+win8+wpa81\Firebase.Database.dll">
+      <PackagePath>Firebase.Database.dll</PackagePath>
+      <Modified>2017-01-07T14:27:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\google.apis\1.34.0\lib\netstandard1.3\Google.Apis.dll">
+      <PackagePath>Google.Apis.dll</PackagePath>
+      <Modified>2018-05-30T09:24:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\google.apis.auth\1.34.0\lib\netstandard1.3\Google.Apis.Auth.PlatformServices.dll">
+      <PackagePath>Google.Apis.Auth.PlatformServices.dll</PackagePath>
+      <Modified>2018-05-30T09:24:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\google.apis.auth\1.34.0\lib\netstandard1.3\Google.Apis.Auth.dll">
+      <PackagePath>Google.Apis.Auth.dll</PackagePath>
+      <Modified>2018-05-30T09:24:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\google.apis.core\1.34.0\lib\netstandard1.3\Google.Apis.Core.dll">
+      <PackagePath>Google.Apis.Core.dll</PackagePath>
+      <Modified>2018-05-30T09:24:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.aspnetcore.http.abstractions\2.1.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll">
+      <PackagePath>Microsoft.AspNetCore.Http.Abstractions.dll</PackagePath>
+      <Modified>2018-05-16T18:18:12.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.aspnetcore.http.features\2.1.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Features.dll">
+      <PackagePath>Microsoft.AspNetCore.Http.Features.dll</PackagePath>
+      <Modified>2018-05-16T18:17:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.extensions.configuration\2.1.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll">
+      <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>
+      <Modified>2018-05-16T18:18:12.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.extensions.configuration.abstractions\2.1.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll">
+      <PackagePath>Microsoft.Extensions.Configuration.Abstractions.dll</PackagePath>
+      <Modified>2018-05-16T18:17:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.extensions.configuration.binder\2.1.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll">
+      <PackagePath>Microsoft.Extensions.Configuration.Binder.dll</PackagePath>
+      <Modified>2018-05-16T18:17:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\2.1.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+      <PackagePath>Microsoft.Extensions.DependencyInjection.Abstractions.dll</PackagePath>
+      <Modified>2018-05-16T18:18:12.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.extensions.http\2.1.0\lib\netstandard2.0\Microsoft.Extensions.Http.dll">
+      <PackagePath>Microsoft.Extensions.Http.dll</PackagePath>
+      <Modified>2018-05-16T18:18:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.extensions.logging\2.1.0\lib\netstandard2.0\Microsoft.Extensions.Logging.dll">
+      <PackagePath>Microsoft.Extensions.Logging.dll</PackagePath>
+      <Modified>2018-05-16T18:17:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.extensions.logging.abstractions\2.1.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll">
+      <PackagePath>Microsoft.Extensions.Logging.Abstractions.dll</PackagePath>
+      <Modified>2018-05-16T18:17:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.extensions.options\2.1.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll">
+      <PackagePath>Microsoft.Extensions.Options.dll</PackagePath>
+      <Modified>2018-05-16T18:17:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.extensions.primitives\2.1.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll">
+      <PackagePath>Microsoft.Extensions.Primitives.dll</PackagePath>
+      <Modified>2018-05-16T18:17:50.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.net.http\2.2.29\lib\win8\System.Net.Http.Extensions.dll">
       <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
@@ -715,6 +787,34 @@
       <PackagePath>netstandard.dll</PackagePath>
       <Modified>2018-05-16T15:28:36.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\rx-core\2.2.5\lib\windows8\System.Reactive.Core.dll">
+      <PackagePath>System.Reactive.Core.dll</PackagePath>
+      <Modified>2014-07-22T13:49:12.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\rx-interfaces\2.2.5\lib\windows8\System.Reactive.Interfaces.dll">
+      <PackagePath>System.Reactive.Interfaces.dll</PackagePath>
+      <Modified>2014-07-22T13:49:14.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\rx-linq\2.2.5\lib\windows8\System.Reactive.Linq.dll">
+      <PackagePath>System.Reactive.Linq.dll</PackagePath>
+      <Modified>2014-07-22T13:49:14.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\rx-platformservices\2.2.5\lib\windows8\System.Reactive.PlatformServices.dll">
+      <PackagePath>System.Reactive.PlatformServices.dll</PackagePath>
+      <Modified>2014-07-22T13:49:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\system.memory\4.5.0\lib\netstandard2.0\System.Memory.dll">
+      <PackagePath>System.Memory.dll</PackagePath>
+      <Modified>2018-05-15T11:29:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\system.runtime.compilerservices.unsafe\4.5.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
+      <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
+      <Modified>2018-05-15T11:29:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\system.text.encodings.web\4.5.0\lib\netstandard2.0\System.Text.Encodings.Web.dll">
+      <PackagePath>System.Text.Encodings.Web.dll</PackagePath>
+      <Modified>2018-05-15T11:29:52.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\xamarin.forms\3.1.0.697729\lib\uap10.0\Xamarin.Forms.Core.dll">
       <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
       <Modified>2018-07-26T17:16:18.000</Modified>
@@ -733,7 +833,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat\bin\Debug\netstandard2.0\RealTimeChat.dll">
       <PackagePath>RealTimeChat.dll</PackagePath>
-      <Modified>2018-09-07T06:51:54.171</Modified>
+      <Modified>2018-09-12T14:51:36.275</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat\Images\sendMessage.png">
+      <PackagePath>sendMessage.png</PackagePath>
+      <Modified>2018-09-07T09:43:35.458</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
@@ -876,15 +980,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\bin\x86\Debug\RealTimeChat.UWP.xr.xml">
       <PackagePath>RealTimeChat.UWP.xr.xml</PackagePath>
-      <Modified>2018-09-05T09:01:22.105</Modified>
+      <Modified>2018-09-12T14:31:00.028</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-09-07T06:52:34.641</Modified>
+      <Modified>2018-09-12T14:51:44.537</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-09-07T06:52:34.664</Modified>
+      <Modified>2018-09-12T14:51:44.538</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -941,11 +1045,11 @@
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-07T06:52:51.801</Modified>
+      <Modified>2018-09-12T14:31:08.448</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\bin\x86\Debug\Core\RealTimeChat.UWP.exe">
       <PackagePath>RealTimeChat.UWP.exe</PackagePath>
-      <Modified>2018-09-07T06:52:55.538</Modified>
+      <Modified>2018-09-12T14:51:45.982</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -28,6 +28,60 @@
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\bin\x86\Debug\RealTimeChat.UWP.exe">
       <PackagePath>entrypoint\RealTimeChat.UWP.exe</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\aguacongas.firebase\2.1.0\lib\netstandard2.0\Aguacongas.Firebase.dll">
+      <PackagePath>Aguacongas.Firebase.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\aguacongas.firebase.authentication\2.1.0\lib\netstandard2.0\Aguacongas.Firebase.Authentication.dll">
+      <PackagePath>Aguacongas.Firebase.Authentication.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\firebase.database\1.0.0\lib\portable45-net45+win8+wpa81\Firebase.Database.dll">
+      <PackagePath>Firebase.Database.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\google.apis\1.34.0\lib\netstandard1.3\Google.Apis.dll">
+      <PackagePath>Google.Apis.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\google.apis.auth\1.34.0\lib\netstandard1.3\Google.Apis.Auth.PlatformServices.dll">
+      <PackagePath>Google.Apis.Auth.PlatformServices.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\google.apis.auth\1.34.0\lib\netstandard1.3\Google.Apis.Auth.dll">
+      <PackagePath>Google.Apis.Auth.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\google.apis.core\1.34.0\lib\netstandard1.3\Google.Apis.Core.dll">
+      <PackagePath>Google.Apis.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.aspnetcore.http.abstractions\2.1.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll">
+      <PackagePath>Microsoft.AspNetCore.Http.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.aspnetcore.http.features\2.1.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Features.dll">
+      <PackagePath>Microsoft.AspNetCore.Http.Features.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.extensions.configuration\2.1.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll">
+      <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.extensions.configuration.abstractions\2.1.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll">
+      <PackagePath>Microsoft.Extensions.Configuration.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.extensions.configuration.binder\2.1.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll">
+      <PackagePath>Microsoft.Extensions.Configuration.Binder.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\2.1.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+      <PackagePath>Microsoft.Extensions.DependencyInjection.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.extensions.http\2.1.0\lib\netstandard2.0\Microsoft.Extensions.Http.dll">
+      <PackagePath>Microsoft.Extensions.Http.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.extensions.logging\2.1.0\lib\netstandard2.0\Microsoft.Extensions.Logging.dll">
+      <PackagePath>Microsoft.Extensions.Logging.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.extensions.logging.abstractions\2.1.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll">
+      <PackagePath>Microsoft.Extensions.Logging.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.extensions.options\2.1.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll">
+      <PackagePath>Microsoft.Extensions.Options.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.extensions.primitives\2.1.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll">
+      <PackagePath>Microsoft.Extensions.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.net.http\2.2.29\lib\win8\System.Net.Http.Extensions.dll">
       <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
     </AppxPackagedFile>
@@ -535,6 +589,27 @@
     <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.1.5\runtimes\win10-x86\lib\uap10.0.15138\netstandard.dll">
       <PackagePath>netstandard.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\rx-core\2.2.5\lib\windows8\System.Reactive.Core.dll">
+      <PackagePath>System.Reactive.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\rx-interfaces\2.2.5\lib\windows8\System.Reactive.Interfaces.dll">
+      <PackagePath>System.Reactive.Interfaces.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\rx-linq\2.2.5\lib\windows8\System.Reactive.Linq.dll">
+      <PackagePath>System.Reactive.Linq.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\rx-platformservices\2.2.5\lib\windows8\System.Reactive.PlatformServices.dll">
+      <PackagePath>System.Reactive.PlatformServices.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\system.memory\4.5.0\lib\netstandard2.0\System.Memory.dll">
+      <PackagePath>System.Memory.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\system.runtime.compilerservices.unsafe\4.5.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
+      <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\system.text.encodings.web\4.5.0\lib\netstandard2.0\System.Text.Encodings.Web.dll">
+      <PackagePath>System.Text.Encodings.Web.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\xamarin.forms\3.1.0.697729\lib\uap10.0\Xamarin.Forms.Core.dll">
       <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
     </AppxPackagedFile>
@@ -549,6 +624,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat\bin\Debug\netstandard2.0\RealTimeChat.dll">
       <PackagePath>RealTimeChat.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat\Images\sendMessage.png">
+      <PackagePath>sendMessage.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>

@@ -13,6 +13,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Aguacongas.Firebase" Version="2.1.0" />
+    <PackageReference Include="Firebase.Database" Version="1.0.0" />
     <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="Plugin.FirebasePushNotification" Version="2.3.5" />
@@ -22,11 +24,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Views\ListViewPushNotificationsView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\LiveChatView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\LoginView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
 </Project>

@@ -30,6 +30,11 @@ namespace RealTimeChat.Droid
         {
             base.OnNewIntent(intent);
             FirebasePushNotificationManager.ProcessIntent(this, intent);
+
+            //CrossFirebasePushNotification
+
+            //FirebasePushNotificationManager
+
         }
 
     }

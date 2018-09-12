@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using Aguacongas.Firebase;
 
 namespace RealTimeChat.ViewModels
 {
@@ -20,6 +21,8 @@ namespace RealTimeChat.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        FirebaseClient client;
         
         public INavigation NavigationService { get; set; }
 
@@ -51,6 +54,7 @@ namespace RealTimeChat.ViewModels
         private readonly HttpClient _client = new HttpClient(); //Creating a new instance of HttpClient. (Microsoft.Net.Http)
 
         public string content { get; set; }
+
 
 
         //public int Id { get; set; }
@@ -134,6 +138,8 @@ namespace RealTimeChat.ViewModels
 
         public LiveChatViewModel(INavigation _navigationService, UserModel _user, ObservableCollection<UserModel> _usersList)
         {
+            //client = new FirebaseClient("https://www.firebase.com/");
+
             User = _user;
 
             content = "";
@@ -179,6 +185,15 @@ namespace RealTimeChat.ViewModels
             ////////////////////////////////////////
             ////////////////////////////////////////
 
+            FirebaseOptions fo = new FirebaseOptions();
+            fo.DatabaseUrl = Url;
+
+            HttpClient hc = new HttpClient();
+            hc.BaseAddress = new Uri(Url);
+
+            FirebaseClient fc = new FirebaseClient(hc, fo);
+
+            //var h = fc.Equals;
 
             MessageModel message = new MessageModel { Title = MessageText, MessageOwner = User.UserName }; //Creating a new instane of Post with a Title Property and its value in a Timestamp format
             content = JsonConvert.SerializeObject(message); //Serializes or convert the created Post into a JSON String
