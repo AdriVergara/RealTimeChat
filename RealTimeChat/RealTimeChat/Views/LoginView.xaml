@@ -22,7 +22,9 @@
             <Picker Title="User Name" ItemsSource="{Binding UsersList}" ItemDisplayBinding="{Binding UserName}" SelectedItem="{Binding selectedIt}"/>
 
         <Button Text="Confirm" Command="{Binding ConfirmUser}" WidthRequest="200"/>
-          
-      </StackLayout>
+
+        <Button Text="Try Push Notification" VerticalOptions="End" HorizontalOptions="Center" Margin="10" Command="{Binding ListViewPushNotifications}"/>
+
+    </StackLayout>
     
 </ContentPage>

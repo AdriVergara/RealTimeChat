@@ -25,6 +25,7 @@ namespace RealTimeChat.ViewModels
         public INavigation NavigationService { get; set; }
 
         public ICommand ConfirmUser { get; set; }
+        public ICommand ListViewPushNotifications { get; set; }
 
         private ObservableCollection<UserModel> _usersList;
         public ObservableCollection<UserModel> UsersList
@@ -54,6 +55,12 @@ namespace RealTimeChat.ViewModels
 
             NavigationService = _navigationService;
             ConfirmUser = new Command(async () => await ExecuteConfirmUser());
+            ListViewPushNotifications = new Command(async () => await ExecuteListViewPushNotifications());
+        }
+
+        public async Task ExecuteListViewPushNotifications()
+        {
+            await NavigationService.PushAsync(new ListViewPushNotificationsView(NavigationService));
         }
 
         //private async Task LoadFirebaseDatabase()
