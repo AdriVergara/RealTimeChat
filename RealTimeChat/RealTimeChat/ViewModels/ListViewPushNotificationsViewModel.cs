@@ -24,7 +24,37 @@ namespace RealTimeChat.ViewModels
 
         public INavigation NavigationService { get; set; }
 
-        FirebaseClient Client;
+        public FirebaseClient Client { get; set; }
+
+        public string _messageOwner { get; set; }
+        public string MessageOwner
+        {
+            get
+            {
+                return _messageOwner;
+            }
+            set
+            {
+                if (_messageOwner == value) return;
+                _messageOwner = value;
+                OnPropertyChanged(nameof(MessageOwner));
+            }
+        }
+
+        public string _title { get; set; }
+        public string Title
+        {
+            get
+            {
+                return _title;
+            }
+            set
+            {
+                if (_title == value) return;
+                _title = value;
+                OnPropertyChanged(nameof(Title));
+            }
+        }
 
         public ObservableCollection<MessageModel> _messagesList { get; set; }
         public ObservableCollection<MessageModel> MessagesList
@@ -47,7 +77,15 @@ namespace RealTimeChat.ViewModels
 
             Client = new FirebaseClient("https://realtimechat-b2228.firebaseio.com/");
 
-            InitializeMessagesList();
+            //var ei = getList().Result;
+
+            var taskList = getList();
+            //MessagesList = new ObservableCollection<MessageModel>(taskList);
+
+            //MessagesList = new ObservableCollection<MessageModel>(getList().Result);
+            
+            //MessagesList = new ObservableCollection<MessageModel>(ei);
+            //MessagesList = new ObservableCollection<MessageModel>(ei.Result);
         }
 
         public async Task<List<MessageModel>> getList()
@@ -61,6 +99,8 @@ namespace RealTimeChat.ViewModels
                         Title = item.Object.Title,
                         MessageOwner = item.Object.MessageOwner
                     }).ToList();
+
+            //MessagesList = new ObservableCollection<MessageModel>(List);
 
             return List;
         }
@@ -77,7 +117,7 @@ namespace RealTimeChat.ViewModels
 
         public async Task InitializeMessagesList()
         {
-            MessagesList = getList();
+            //MessagesList = getList();
 
         }
     }

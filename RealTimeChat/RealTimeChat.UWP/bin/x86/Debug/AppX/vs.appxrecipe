@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>32F124C5FE6876F4C811C78B1B13FF3C371CF0A851B06B4E27F940262C5C5C8C</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>2BEC4A6804606695616AD7E26E2A96B66BA706677C877F6FB2959293B7BDABDD</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>3cc3dc05-80c7-4cba-a21b-7b95f107126d_1.0.0.0_x86__naskg697v8b5c</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>3cc3dc05-80c7-4cba-a21b-7b95f107126d_naskg697v8b5c!App</RegisteredUserModeAppID>
     <RegisteredPackageID>3cc3dc05-80c7-4cba-a21b-7b95f107126d</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-12T14:51:45.989</Modified>
+      <Modified>2018-09-25T15:09:40.663</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\bin\x86\Debug\RealTimeChat.UWP.exe">
       <PackagePath>entrypoint\RealTimeChat.UWP.exe</PackagePath>
-      <Modified>2018-09-12T14:51:44.802</Modified>
+      <Modified>2018-09-25T15:09:39.059</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\aguacongas.firebase\2.1.0\lib\netstandard2.0\Aguacongas.Firebase.dll">
       <PackagePath>Aguacongas.Firebase.dll</PackagePath>
@@ -50,6 +50,10 @@
     <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\firebase.database\1.0.0\lib\portable45-net45+win8+wpa81\Firebase.Database.dll">
       <PackagePath>Firebase.Database.dll</PackagePath>
       <Modified>2017-01-07T14:27:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\firesharp\2.0.4\lib\portable-net45+sl5+wp8+win8\FireSharp.dll">
+      <PackagePath>FireSharp.dll</PackagePath>
+      <Modified>2016-05-10T11:41:26.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\google.apis\1.34.0\lib\netstandard1.3\Google.Apis.dll">
       <PackagePath>Google.Apis.dll</PackagePath>
@@ -74,6 +78,14 @@
     <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.aspnetcore.http.features\2.1.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Features.dll">
       <PackagePath>Microsoft.AspNetCore.Http.Features.dll</PackagePath>
       <Modified>2018-05-16T18:17:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.bcl.async\1.0.168\lib\win8\Microsoft.Threading.Tasks.Extensions.dll">
+      <PackagePath>Microsoft.Threading.Tasks.Extensions.dll</PackagePath>
+      <Modified>2014-04-07T10:26:14.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.bcl.async\1.0.168\lib\win8\Microsoft.Threading.Tasks.dll">
+      <PackagePath>Microsoft.Threading.Tasks.dll</PackagePath>
+      <Modified>2014-04-07T10:26:14.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\microsoft.extensions.configuration\2.1.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll">
       <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>
@@ -833,7 +845,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat\bin\Debug\netstandard2.0\RealTimeChat.dll">
       <PackagePath>RealTimeChat.dll</PackagePath>
-      <Modified>2018-09-12T14:51:36.275</Modified>
+      <Modified>2018-09-25T15:09:27.307</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat\Images\sendMessage.png">
       <PackagePath>sendMessage.png</PackagePath>
@@ -980,15 +992,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\bin\x86\Debug\RealTimeChat.UWP.xr.xml">
       <PackagePath>RealTimeChat.UWP.xr.xml</PackagePath>
-      <Modified>2018-09-12T14:31:00.028</Modified>
+      <Modified>2018-09-25T12:56:13.136</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-09-12T14:51:44.537</Modified>
+      <Modified>2018-09-25T15:09:38.732</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-09-12T14:51:44.538</Modified>
+      <Modified>2018-09-25T15:09:38.733</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -1045,11 +1057,11 @@
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-12T14:31:08.448</Modified>
+      <Modified>2018-09-25T14:50:45.659</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\bin\x86\Debug\Core\RealTimeChat.UWP.exe">
       <PackagePath>RealTimeChat.UWP.exe</PackagePath>
-      <Modified>2018-09-12T14:51:45.982</Modified>
+      <Modified>2018-09-25T15:09:40.655</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

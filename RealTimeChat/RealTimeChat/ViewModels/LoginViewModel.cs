@@ -60,7 +60,7 @@ namespace RealTimeChat.ViewModels
 
         public async Task ExecuteListViewPushNotifications()
         {
-            await NavigationService.PushAsync(new ListViewPushNotificationsView(NavigationService));
+            await NavigationService.PushAsync(new ListViewPushNotificationsView(NavigationService, selectedIt, UsersList));
         }
 
         //private async Task LoadFirebaseDatabase()
@@ -108,7 +108,8 @@ namespace RealTimeChat.ViewModels
             }
 
             //await NavigationService.PushAsync(new LiveChatView(NavigationService, us, UsersList));
-            await NavigationService.PushAsync(new LiveChatView(NavigationService, selectedIt, UsersList));
+
+            //await NavigationService.PushAsync(new Database3(NavigationService, selectedIt, UsersList));
         }
     }
 }

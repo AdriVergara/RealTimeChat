@@ -23,6 +23,8 @@ namespace RealTimeChat.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
 
+            
+
             //FirebasePushNotificationManager.ProcessIntent(this, Intent);
         }
 
