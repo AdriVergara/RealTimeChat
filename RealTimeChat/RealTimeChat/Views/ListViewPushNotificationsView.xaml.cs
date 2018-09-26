@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,16 +15,21 @@ namespace RealTimeChat.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ListViewPushNotificationsView : ContentPage
 	{
-        ListViewPushNotificationsViewModel db;
-
-		public ListViewPushNotificationsView (INavigation _navigation)
+		public ListViewPushNotificationsView (INavigation _navigation, UserModel _user, ObservableCollection<UserModel> _usersList)
 		{
 			InitializeComponent ();
 
             //BindingContext = new ListViewPushNotificationsViewModel(_navigation);
 
-            db = new ListViewPushNotificationsViewModel(_navigation);
-            MyListView.BindingContext = db.getList();
+            //ListViewPushNotificationsViewModel db = new ListViewPushNotificationsViewModel(_navigation);
+            //Database3 db = new Database3();
+            //RealTimeListView.BindingContext = db.getList();
+
+            BindingContext = new Database3(_navigation, _user, _usersList);
+
+            //var task = db.getMessage();
+            //task.Wait();
+            //RealTimeListView.BindingContext = task;//.Result;
         }
 	}
 }

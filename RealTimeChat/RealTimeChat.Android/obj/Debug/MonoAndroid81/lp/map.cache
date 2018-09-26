@@ -1,6 +1,7 @@
 Aguacongas.Firebase.Authentication
 Aguacongas.Firebase
 Firebase.Database
+FireSharp
 FormsViewGroup
 Google.Apis.Auth
 Google.Apis.Auth.PlatformServices
@@ -17,6 +18,8 @@ Microsoft.Extensions.Logging.Abstractions
 Microsoft.Extensions.Logging
 Microsoft.Extensions.Options
 Microsoft.Extensions.Primitives
+Microsoft.Threading.Tasks
+Microsoft.Threading.Tasks.Extensions
 Newtonsoft.Json
 Plugin.FirebasePushNotification.Abstractions
 Plugin.FirebasePushNotification

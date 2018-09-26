@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "d92bc1f763652413134d691913c85e5b2fc19a21"
+    "signature": "68e1c3d3011f6aa56493c6d62ad637cde7880dd8"
   },
   "compilationOptions": {},
   "targets": {
@@ -10,6 +10,7 @@
       "RealTimeChat/1.0.0": {
         "dependencies": {
           "Aguacongas.Firebase": "2.1.0",
+          "FireSharp": "2.0.4",
           "Firebase.Database": "1.0.0",
           "Microsoft.Net.Http": "2.2.29",
           "NETStandard.Library": "2.0.3",
@@ -54,6 +55,19 @@
           "lib/portable45-net45+win8+wpa81/Firebase.Database.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "FireSharp/2.0.4": {
+        "dependencies": {
+          "Microsoft.Bcl.Async": "1.0.168",
+          "Microsoft.Net.Http": "2.2.29",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/portable-net45+sl5+wp8+win8/FireSharp.dll": {
+            "assemblyVersion": "2.0.3.0",
+            "fileVersion": "2.0.3.0"
           }
         }
       },
@@ -131,6 +145,25 @@
       "Microsoft.Bcl/1.1.10": {
         "dependencies": {
           "Microsoft.Bcl.Build": "1.0.14"
+        }
+      },
+      "Microsoft.Bcl.Async/1.0.168": {
+        "dependencies": {
+          "Microsoft.Bcl": "1.1.10"
+        },
+        "runtime": {
+          "lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.dll": {
+            "assemblyVersion": "1.0.168.0",
+            "fileVersion": "1.0.168.0"
+          },
+          "lib/net40/Microsoft.Threading.Tasks.Extensions.dll": {
+            "assemblyVersion": "1.0.12.0",
+            "fileVersion": "1.0.168.0"
+          },
+          "lib/net40/Microsoft.Threading.Tasks.dll": {
+            "assemblyVersion": "1.0.12.0",
+            "fileVersion": "1.0.168.0"
+          }
         }
       },
       "Microsoft.Bcl.Build/1.0.14": {},
@@ -927,6 +960,13 @@
       "path": "firebase.database/1.0.0",
       "hashPath": "firebase.database.1.0.0.nupkg.sha512"
     },
+    "FireSharp/2.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-laSHpVUBG6iCTUixmpeUmYxie2zbziOBM+LU0v2A0ETE9dUyBA+8aY63xql/o8LXj+kFybBLYUKBUrLCZWaq+A==",
+      "path": "firesharp/2.0.4",
+      "hashPath": "firesharp.2.0.4.nupkg.sha512"
+    },
     "Google.Apis/1.34.0": {
       "type": "package",
       "serviceable": true,
@@ -968,6 +1008,13 @@
       "sha512": "sha512-+tTqoh/M1pyL8El3qLy30EcwnAtyvFoDZJtdG9Cbg/WdFbh4N8kyrq198XHuEL7lnJbeD0DRO8jcX5IIOh05cQ==",
       "path": "microsoft.bcl/1.1.10",
       "hashPath": "microsoft.bcl.1.1.10.nupkg.sha512"
+    },
+    "Microsoft.Bcl.Async/1.0.168": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tUNC02eBwDKpGre0BcNIvblLv1q0Q3DnS/vtkRHj2FE1sXwt386HAudztyl5C0U88hllrqHDvtlz8bK0Y8cHDA==",
+      "path": "microsoft.bcl.async/1.0.168",
+      "hashPath": "microsoft.bcl.async.1.0.168.nupkg.sha512"
     },
     "Microsoft.Bcl.Build/1.0.14": {
       "type": "package",
