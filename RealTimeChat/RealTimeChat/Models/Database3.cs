@@ -1,11 +1,12 @@
 ﻿//using Firebase.Database;
 using Firebase.Database.Extensions;
-using Firebase.Database.Query;
+using Firebase.Database;
 using Firebase.Database.Streaming;
 using FireSharp;
 using FireSharp.Config;
 using FireSharp.Interfaces;
 using FireSharp.Response;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -79,12 +80,14 @@ namespace RealTimeChat.Models
         public ICommand SendMessageToChat { get; set; }
 
         IFirebaseConfig config { get; set; }
-        IFirebaseClient client { get; set; }
+
+        //IFirebaseClient client { get; set; }
+        Firebase.Database.FirebaseClient client { get; set; }
+
+        IFirebaseClient FiresharpClient { get; set; }
 
         public Database3(INavigation _navigation, UserModel _user, ObservableCollection<UserModel> _usersList)
         {
-            MessagesList = new ObservableCollection<MessageModel>();
-
             User = _user;
 
             config = new FirebaseConfig
@@ -93,15 +96,20 @@ namespace RealTimeChat.Models
                 BasePath = "https://realtimechat-b2228.firebaseio.com/"
             };
 
-            client = new FirebaseClient(config);
+            //client = new FirebaseClient(config);
+            
+
+            client = new Firebase.Database.FirebaseClient("https://realtimechat-b2228.firebaseio.com/");
+
+            FiresharpClient = new FireSharp.FirebaseClient(config);
 
             NavigationService = _navigation;
 
             //Observer.OnCompleted();
 
-            MessagesList = new ObservableCollection<MessageModel>();
+            //getMessage();
 
-            getMessage();
+            Streaming();
 
             //task.Wait();
 
@@ -109,24 +117,20 @@ namespace RealTimeChat.Models
 
             SendMessageToChat = new Command(async () => await ExecuteSendMessageToChat());
 
-
             //FUNCIONA!! (Actualizar MessagesList)
-            Streaming();
-
-
             
-
 
         }
 
+        //Every time the database changes, this function has to update the List of Messages(MessagesList) to load the other messages
         public async Task Streaming()
         {
-            EventStreamResponse response = await client.OnAsync("", (sender, args, context) => {
-                Console.WriteLine(args.Data);
+            EventStreamResponse response = await FiresharpClient.OnAsync("Chat", (sender, args, context) =>
+            {
+                getMessage(); //Refresh() == Read the rtDB and update MessagesList
             });
 
-            //Call dispose to stop listening for events
-            
+            //This disable the streaming function
             //response.Dispose();
         }
 
@@ -138,40 +142,82 @@ namespace RealTimeChat.Models
                 MessageOwner = User.UserName
             };
 
-            PushResponse response = await client.PushAsync("Chat", MessageToPush);
-            //response.Result.name; //The result will contain the child name of the new data that was added
-
-            //string hola = response.Result.name;
+            var item = await client
+              .Child("Chat")
+              //.WithAuth("<Authentication Token>") // <-- Add Auth token if required. Auth instructions further down in readme.
+              .PostAsync(MessageToPush);
 
             MessagesList.Add(MessageToPush);
+
+            //Abajo para Firesharp, arriba para Firebase.Database
+
+            //var MessageToPush = new MessageModel()
+            //{
+            //    Title = MessageText,
+            //    MessageOwner = User.UserName
+            //};
+
+            //PushResponse response = await client.PushAsync("Chat", MessageToPush);
+            ////response.Result.name; //The result will contain the child name of the new data that was added
+
+            ////string hola = response.Result.name;
+
+            //MessagesList.Add(MessageToPush);
         }
 
         public async void getMessage()
         {
-            //todo el json
-            FirebaseResponse response = await client.GetAsync("Chat");
+            var List = (await client
+                .Child("Chat")
+                .OnceAsync<MessageModel>())
+                .Select(item =>
+                    new MessageModel
+                    {
+                        Title = item.Object.Title,
+                        MessageOwner = item.Object.MessageOwner
+                    }).ToList();
 
-            //MessagesList = response.ResultAs<ObservableCollection<MessageModel>>();
+            MessagesList = new ObservableCollection<MessageModel>(List);
 
-            ObservableCollection<MessageModel> ListaAuxiliar = response.ResultAs<ObservableCollection<MessageModel>>();
+            //Arriba para Firebase.Database
+
+            //MessagesList = new ObservableCollection<MessageModel>();
+
+            ////todo el json
+            //FirebaseResponse response = await client.GetAsync("Chat");
+
+            ////string e = response.Body;
+
+            ////var a = JsonConvert.DeserializeObject(response.Body);
+
+            ////MessageModel messages = JsonConvert.DeserializeObject<MessageModel>(response.Body); //Deserializes or converts JSON String into a collection of Post
+
+            //List<MessageModel> messages = JsonConvert.DeserializeObject<List<MessageModel>>(response.Body); //Deserializes or converts JSON String into a collection of Post
+
+            //MessagesList = new ObservableCollection<MessageModel>(messages); //Converting the List to ObservalbleCollection of Post
+
+            //var a = response.ResultAs<ObservableCollection<MessageModel>>();
+
+            //var list = JsonConvert.DeserializeObject<List<MessageModel>>(response.Body);
+            //MessagesList = new ObservableCollection<MessageModel>(list);
+
+            //ObservableCollection<MessageModel> ListaAuxiliar = response.ResultAs<ObservableCollection<MessageModel>>();
 
             //var items = await response.Body
 
+            //MessagesList = new ObservableCollection<MessageModel>();
+
             //var items = await firebase
-        //        .Child("Chat")
-        //        //.WithAuth("<Authentication Token>") // <-- Add Auth token if required. Auth instructions further down in readme.
-        //        .OnceAsync<MessageModel>();
+            //    .Child("Chat")
+            //    //.WithAuth("<Authentication Token>") // <-- Add Auth token if required. Auth instructions further down in readme.
+            //    .OnceAsync<MessageModel>();
 
-            //    foreach (var item in items)
-            //    {
-            //        var message = new MessageModel { Title = item.Object.Title, MessageOwner = item.Object.MessageOwner };
+            //foreach (var item in items)
+            //{
+            //    var message = new MessageModel { Title = item.Object.Title, MessageOwner = item.Object.MessageOwner };
 
-            //        MessagesList.Add(message);
-            //    }
-
-
-
-
+            //    MessagesList.Add(message);
+            //}
 
 
 

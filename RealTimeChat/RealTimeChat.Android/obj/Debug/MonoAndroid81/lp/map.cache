@@ -1,5 +1,3 @@
-RealTimeChat
-System.Runtime
 Aguacongas.Firebase.Authentication
 Aguacongas.Firebase
 Firebase.Database
@@ -25,6 +23,7 @@ Microsoft.Threading.Tasks.Extensions
 Newtonsoft.Json
 Plugin.FirebasePushNotification.Abstractions
 Plugin.FirebasePushNotification
+RealTimeChat
 System.Net.Http.Extensions
 System.Net.Http.Primitives
 System.Reactive.Core
@@ -32,6 +31,7 @@ System.Reactive.Interfaces
 System.Reactive.Linq
 System.Reactive.PlatformServices
 System.Runtime.CompilerServices.Unsafe
+System.Runtime
 System.Text.Encodings.Web
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Lifecycle.Common
@@ -63,3 +63,22 @@ Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
 Xamarin.GooglePlayServices.Basement
 Xamarin.GooglePlayServices.Tasks
+netstandard
+System.Resources.ResourceManager
+System.Threading.Tasks
+System.Diagnostics.Debug
+System.Collections
+System.Text.Encoding
+System.Net.Primitives
+System.Threading
+System.Globalization
+System.Reflection.Extensions
+System.IO.FileSystem
+System.IO.FileSystem.Primitives
+System.Runtime.InteropServices.RuntimeInformation
+System.Console
+System.Security.Cryptography.Primitives
+System.Net.Requests
+System.ComponentModel
+System.Diagnostics.Tools
+System.Runtime.InteropServices.WindowsRuntime
