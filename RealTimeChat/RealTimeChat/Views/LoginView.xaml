@@ -21,7 +21,7 @@
 
             <Picker Title="User Name" ItemsSource="{Binding UsersList}" ItemDisplayBinding="{Binding UserName}" SelectedItem="{Binding selectedIt}"/>
 
-        <Button Text="Confirm" Command="{Binding ConfirmUser}" WidthRequest="200"/>
+        <!--<Button Text="Confirm" Command="{Binding ConfirmUser}" WidthRequest="200"/>-->
 
         <Button Text="Try Push Notification" VerticalOptions="End" HorizontalOptions="Center" Margin="10" Command="{Binding ListViewPushNotifications}"/>
 

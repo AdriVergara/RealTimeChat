@@ -91,7 +91,6 @@ C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.iOS\
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.iOS\bin\iPhone\Debug\zh-Hant\Xamarin.Forms.Platform.iOS.resources.dll
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.iOS\bin\iPhone\Debug\RealTimeChat.dll
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.iOS\bin\iPhone\Debug\RealTimeChat.pdb
-C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.iOS\bin\iPhone\Debug\RealTimeChat.dll.mdb
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items

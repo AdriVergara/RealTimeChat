@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
-using Aguacongas.Firebase;
+//using Aguacongas.Firebase;
 
 namespace RealTimeChat.ViewModels
 {
@@ -22,8 +22,8 @@ namespace RealTimeChat.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        FirebaseClient client;
-        
+        //FirebaseClient client;
+
         public INavigation NavigationService { get; set; }
 
         public string MessageText { get; set; }
@@ -185,13 +185,13 @@ namespace RealTimeChat.ViewModels
             ////////////////////////////////////////
             ////////////////////////////////////////
 
-            FirebaseOptions fo = new FirebaseOptions();
-            fo.DatabaseUrl = Url;
+            //FirebaseOptions fo = new FirebaseOptions();
+            //fo.DatabaseUrl = Url;
 
             HttpClient hc = new HttpClient();
             hc.BaseAddress = new Uri(Url);
 
-            FirebaseClient fc = new FirebaseClient(hc, fo);
+            //FirebaseClient fc = new FirebaseClient(hc, fo);
 
             //var h = fc.Equals;
 
