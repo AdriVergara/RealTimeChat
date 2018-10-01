@@ -30,7 +30,6 @@ C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\obj\x86\Debug\FxResources.System.Linq.Parallel.SR.resw
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\obj\x86\Debug\FxResources.System.Linq.Queryable.SR.resw
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\obj\x86\Debug\FxResources.System.Linq.SR.resw
-C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\obj\x86\Debug\FxResources.System.Memory.SR.resw
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\obj\x86\Debug\FxResources.System.Net.Http.SR.resw
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\obj\x86\Debug\FxResources.System.Net.HttpListener.SR.resw
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\obj\x86\Debug\FxResources.System.Net.Mail.SR.resw
@@ -85,14 +84,6 @@ C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\obj\x86\Debug\FxResources.System.Threading.Thread.SR.resw
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\obj\x86\Debug\FxResources.System.Transactions.Local.SR.resw
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\obj\x86\Debug\FxResources.System.ValueTuple.SR.resw
-C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\obj\x86\Debug\Microsoft.AspNetCore.Http.Abstractions\en-US\Microsoft.AspNetCore.Http.Abstractions.Resources.resw
-C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\obj\x86\Debug\Microsoft.Extensions.Configuration.Binder\en-US\Microsoft.Extensions.Configuration.Binder.Resources.resw
-C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\obj\x86\Debug\Microsoft.Extensions.Configuration\en-US\Microsoft.Extensions.Configuration.Resources.resw
-C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\obj\x86\Debug\Microsoft.Extensions.DependencyInjection.Abstractions\en-US\Microsoft.Extensions.DependencyInjection.Abstractions.Resources.resw
-C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\obj\x86\Debug\Microsoft.Extensions.Http\en-US\Microsoft.Extensions.Http.Resources.resw
-C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\obj\x86\Debug\Microsoft.Extensions.Logging.Abstractions\en-US\Microsoft.Extensions.Logging.Abstractions.Resource.resw
-C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\obj\x86\Debug\Microsoft.Extensions.Options\en-US\Microsoft.Extensions.Options.Resources.resw
-C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\obj\x86\Debug\Microsoft.Extensions.Primitives\en-US\Microsoft.Extensions.Primitives.Resources.resw
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\obj\x86\Debug\System.Reactive.Core\en-US\System.Reactive.Strings_Core.resw
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\obj\x86\Debug\System.Reactive.Linq\en-US\System.Reactive.Strings_Linq.resw
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\obj\x86\Debug\System.Reactive.PlatformServices\en-US\System.Reactive.Strings_PlatformServices.resw
