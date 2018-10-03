@@ -9,5 +9,35 @@ namespace RealTimeChat.Models
         //public int Id { get; set; }
         public string Title { get; set; }
         public string MessageOwner { get; set; }
+
+        //public Picture picture { get; set; }
+        public File File { get; set; }
+        //public string Image { get; set; }
+
+        public MessageModel()
+        {
+
+        }
+
+        public MessageModel(string messageOwner, File file)
+        {
+            Title = null;
+            MessageOwner = messageOwner;
+            File = file;
+        }
+
+        public MessageModel(string title, string messageOwner, File file)
+        {
+            Title = title;
+            MessageOwner = messageOwner;
+            File = file;
+        }
+
+        public MessageModel(string title, string messageOwner)
+        {
+            Title = title;
+            MessageOwner = messageOwner;
+            File = null;
+        }
     }
 }

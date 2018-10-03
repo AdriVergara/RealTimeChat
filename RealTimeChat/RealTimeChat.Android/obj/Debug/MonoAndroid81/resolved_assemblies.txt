@@ -8,6 +8,8 @@ C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Andr
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\android\assets\Mono.Android.dll
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\android\assets\mscorlib.dll
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\android\assets\Newtonsoft.Json.dll
+C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\android\assets\Plugin.FilePicker.Abstractions.dll
+C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\android\assets\Plugin.FilePicker.dll
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\android\assets\Plugin.FirebasePushNotification.Abstractions.dll
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\android\assets\Plugin.FirebasePushNotification.dll
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\android\assets\RealTimeChat.dll

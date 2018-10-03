@@ -16,7 +16,7 @@ namespace RealTimeChat.ViewModels.Converters
             //{
 
             if (Equals(value, null))
-                return "";
+                return false;
 
             string ValueStr = (string)value;
             var parameterLabel = parameter as Label;

@@ -4,6 +4,8 @@ FormsViewGroup
 Microsoft.Threading.Tasks
 Microsoft.Threading.Tasks.Extensions
 Newtonsoft.Json
+Plugin.FilePicker.Abstractions
+Plugin.FilePicker
 Plugin.FirebasePushNotification.Abstractions
 Plugin.FirebasePushNotification
 RealTimeChat

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "e96eb6002309c0bddf9fbc84d6505a105b825ce7"
+    "signature": "1bda12ba2eb56038aade28210c6d04a1df2d7812"
   },
   "compilationOptions": {},
   "targets": {
@@ -16,6 +16,7 @@
           "Newtonsoft.Json": "11.0.2",
           "Plugin.FirebasePushNotification": "2.3.5",
           "System.Net.Http": "4.3.3",
+          "Xam.Plugin.FilePicker": "1.1.0",
           "Xamarin.Firebase.Core": "60.1142.1",
           "Xamarin.Forms": "3.1.0.697729"
         },
@@ -553,6 +554,18 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "Xam.Plugin.FilePicker/1.1.0": {
+        "runtime": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.Abstractions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Xamarin.Firebase.Core/60.1142.1": {},
       "Xamarin.Forms/3.1.0.697729": {
         "runtime": {
@@ -983,6 +996,13 @@
       "sha512": "sha512-LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
+    },
+    "Xam.Plugin.FilePicker/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ORzNG6dEgdBZnIdmbQCpNB4LSSTjBebwGjb1XZrgfbBGjX9muHBfZeQwOnNRvcGlm6fkylzTj2rDslDA1E/JFA==",
+      "path": "xam.plugin.filepicker/1.1.0",
+      "hashPath": "xam.plugin.filepicker.1.1.0.nupkg.sha512"
     },
     "Xamarin.Firebase.Core/60.1142.1": {
       "type": "package",

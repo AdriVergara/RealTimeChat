@@ -113,6 +113,8 @@ class MonoPackageManager_Resources {
 		"Microsoft.Threading.Tasks.dll",
 		"Microsoft.Threading.Tasks.Extensions.dll",
 		"Newtonsoft.Json.dll",
+		"Plugin.FilePicker.Abstractions.dll",
+		"Plugin.FilePicker.dll",
 		"Plugin.FirebasePushNotification.Abstractions.dll",
 		"Plugin.FirebasePushNotification.dll",
 		"RealTimeChat.dll",

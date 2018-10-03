@@ -19,6 +19,7 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity android:configChanges="orientation|screenSize" android:name="md54fe4aef201482be7d95d72c0c9bf0b33.FilePickerActivity" />
     <service android:name="md5f94c88bc84b2976c5a5be24cbb1fa7f2.PNFirebaseIIDService">
       <intent-filter>
         <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
