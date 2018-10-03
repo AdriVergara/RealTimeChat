@@ -17,6 +17,10 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
+using Plugin.FilePicker.Abstractions;
+using Plugin.FilePicker;
+using RealTimeChat.ViewModels.Converters;
+
 namespace RealTimeChat.Models
 {
     public class Database3 : INotifyPropertyChanged
@@ -77,7 +81,51 @@ namespace RealTimeChat.Models
             }
         }
 
+        private byte[] _fileData { get; set; }
+        public byte[] FileData
+        {
+            get
+            {
+                return _fileData;
+            }
+            set
+            {
+                _fileData = value;
+                OnPropertyChanged("FileData");
+            }
+        }
+
+        public object _fileSource { get; set; }
+        public object FileSource
+        {
+            get
+            {
+                return _fileSource;
+            }
+            set
+            {
+                _fileSource = value;
+                OnPropertyChanged("FileSource");
+            }
+        }
+
+        private string _fileName { get; set; }
+        public string FileName
+        {
+            get
+            {
+                return _fileName;
+            }
+            set
+            {
+                _fileName = value;
+                OnPropertyChanged("FileName");
+            }
+        }
+
         public ICommand SendMessageToChat { get; set; }
+        public ICommand SelectFileToInsert { get; set; }
+        public ICommand DownloadFile { get; set; }
 
         IFirebaseConfig config { get; set; }
 
@@ -116,9 +164,11 @@ namespace RealTimeChat.Models
             //var e = task;//.Result;
 
             SendMessageToChat = new Command(async () => await ExecuteSendMessageToChat());
+            SelectFileToInsert = new Command(async () => await ExecuteSelectFileToInsert());
+            DownloadFile = new Command(async (Param) => await ExecuteDownloadFile(Param));
 
             //FUNCIONA!! (Actualizar MessagesList)
-            
+
 
         }
 
@@ -134,13 +184,50 @@ namespace RealTimeChat.Models
             //response.Dispose();
         }
 
+        public async Task ExecuteDownloadFile(object data)
+        {
+            var dataFile = data;
+
+            CrossFilePicker cfp = new CrossFilePicker();
+
+                        
+        }
+
+        public async Task ExecuteSelectFileToInsert()
+        {
+            FileData filedata = await CrossFilePicker.Current.PickFile();
+
+            //Getting the filename and the data info from the image picked
+            FileName = filedata.FileName;
+            FileData = filedata.DataArray;
+
+            //Convert from data info to image 
+            //ByteArrayToImageSourceConverter converter = new ByteArrayToImageSourceConverter();
+
+            //Image that will be displayed
+            //FileSource = converter.Convert(_fileData, null, null, culture: System.Globalization.CultureInfo.CurrentCulture);
+
+            //Picture picture = new Picture(FileName, FileData);
+
+            File newFile = new File(FileName, FileData);
+
+            var MessageToPush = new MessageModel(User.UserName ,newFile);
+
+            var item = await client
+              .Child("Chat")
+              //.WithAuth("<Authentication Token>") // <-- Add Auth token if required. Auth instructions further down in readme.
+              .PostAsync(MessageToPush);
+
+            MessagesList.Add(MessageToPush);
+        }
+
         public async Task ExecuteSendMessageToChat()
         {
-            var MessageToPush = new MessageModel()
-            {
-                Title = MessageText,
-                MessageOwner = User.UserName
-            };
+            var MessageToPush = new MessageModel(MessageText, User.UserName);
+            //{
+            //    Title = MessageText,
+            //    MessageOwner = User.UserName
+            //};
 
             var item = await client
               .Child("Chat")
@@ -174,7 +261,11 @@ namespace RealTimeChat.Models
                     new MessageModel
                     {
                         Title = item.Object.Title,
-                        MessageOwner = item.Object.MessageOwner
+                        MessageOwner = item.Object.MessageOwner,
+                        File = item.Object.File
+
+                        //picture = item.Object.picture
+
                     }).ToList();
 
             MessagesList = new ObservableCollection<MessageModel>(List);
@@ -235,56 +326,5 @@ namespace RealTimeChat.Models
             //response.Dispose();
         }
 
-        //public void getList()
-        //{
-        //    var firebase = new FirebaseClient("https://realtimechat-b2228.firebaseio.com/");
-
-
-
-        //    //Observer.
-
-        //    var observable = firebase
-        //        .Child("Chat")
-        //        //.WithAuth("<Authentication Token>") // <-- Add Auth token if required. Auth instructions further down in readme.
-        //        //.AsRealtimeDatabase<MessageModel>()
-        //        .AsObservable<MessageModel>();
-        //        //.Subscribe(/*Observer*/);
-        //        //.AsObservable<MessageModel>()
-        //        //.
-
-        //    //foreach (var item in items)
-        //    //{
-        //    //    var message = new MessageModel { Title = item.Object.Title, MessageOwner = item.Object.MessageOwner };
-
-        //    //    MessagesList.Add(message);
-        //    //}
-        //}
-
-        //public async void getMessage()
-        //{
-        //    var firebase = new FirebaseClient("https://realtimechat-b2228.firebaseio.com/");
-
-        //    var items = await firebase
-        //        .Child("Chat")
-        //        //.WithAuth("<Authentication Token>") // <-- Add Auth token if required. Auth instructions further down in readme.
-        //        .OnceAsync<MessageModel>();
-
-        //    foreach (var item in items)
-        //    {
-        //        var message = new MessageModel { Title = item.Object.Title, MessageOwner = item.Object.MessageOwner };
-
-        //        MessagesList.Add(message);
-        //    }
-
-        //    //.OnceAsync<MessageModel>())
-        //    //.Select(item =>
-        //    //    new MessageModel
-        //    //    {
-        //    //        Title = item.Object.Title,
-        //    //        MessageOwner = item.Object.MessageOwner
-        //    //    }).ToList();
-
-        //    //return new ObservableCollection<MessageModel>(List);
-        //}
     }
 }

@@ -94,11 +94,11 @@ namespace RealTimeChat.ViewModels
                 .Child("Chat")
                 .OnceAsync<MessageModel>())
                 .Select(item =>
-                    new MessageModel
-                    {
-                        Title = item.Object.Title,
-                        MessageOwner = item.Object.MessageOwner
-                    }).ToList();
+                    new MessageModel(item.Object.Title, item.Object.MessageOwner)).ToList();
+            //{
+            //    Title = item.Object.Title,
+            //    MessageOwner = item.Object.MessageOwner
+            //}).ToList();
 
             //MessagesList = new ObservableCollection<MessageModel>(List);
 

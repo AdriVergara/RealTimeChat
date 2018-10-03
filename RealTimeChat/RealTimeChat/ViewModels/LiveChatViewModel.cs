@@ -195,7 +195,7 @@ namespace RealTimeChat.ViewModels
 
             //var h = fc.Equals;
 
-            MessageModel message = new MessageModel { Title = MessageText, MessageOwner = User.UserName }; //Creating a new instane of Post with a Title Property and its value in a Timestamp format
+            MessageModel message = new MessageModel(MessageText, User.UserName); //Creating a new instane of Post with a Title Property and its value in a Timestamp format
             content = JsonConvert.SerializeObject(message); //Serializes or convert the created Post into a JSON String
             DbJson = DbJson.TrimEnd(']');
             //str.Trim().Length

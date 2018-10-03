@@ -26,6 +26,7 @@ namespace RealTimeChat.ViewModels
 
         public ICommand ConfirmUser { get; set; }
         public ICommand ListViewPushNotifications { get; set; }
+        public ICommand TestImageListView { get; set; }
 
         private ObservableCollection<UserModel> _usersList;
         public ObservableCollection<UserModel> UsersList
@@ -56,6 +57,12 @@ namespace RealTimeChat.ViewModels
             NavigationService = _navigationService;
             ConfirmUser = new Command(async () => await ExecuteConfirmUser());
             ListViewPushNotifications = new Command(async () => await ExecuteListViewPushNotifications());
+            TestImageListView = new Command(async () => await ExecuteTestImageListView());
+        }
+
+        private async Task ExecuteTestImageListView()
+        {
+            await NavigationService.PushAsync(new TestImageListView(NavigationService));
         }
 
         public async Task ExecuteListViewPushNotifications()

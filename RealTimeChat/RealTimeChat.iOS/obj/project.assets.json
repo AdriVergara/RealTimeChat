@@ -174,6 +174,17 @@
           }
         }
       },
+      "Xam.Plugin.FilePicker/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.dll": {}
+        }
+      },
       "Xamarin.Build.Download/0.4.6": {
         "type": "package",
         "build": {
@@ -382,6 +393,7 @@
           "Newtonsoft.Json": "11.0.2",
           "Plugin.FirebasePushNotification": "2.3.5",
           "System.Net.Http": "4.3.3",
+          "Xam.Plugin.FilePicker": "1.1.0",
           "Xamarin.Firebase.Core": "60.1142.1",
           "Xamarin.Forms": "3.1.0.697729"
         },
@@ -556,6 +568,17 @@
           "runtimes/win/lib/netstandard1.3/System.Net.Http.dll": {}
         }
       },
+      "Xam.Plugin.FilePicker/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.dll": {}
+        }
+      },
       "Xamarin.Build.Download/0.4.6": {
         "type": "package",
         "build": {
@@ -764,6 +787,7 @@
           "Newtonsoft.Json": "11.0.2",
           "Plugin.FirebasePushNotification": "2.3.5",
           "System.Net.Http": "4.3.3",
+          "Xam.Plugin.FilePicker": "1.1.0",
           "Xamarin.Firebase.Core": "60.1142.1",
           "Xamarin.Forms": "3.1.0.697729"
         },
@@ -938,6 +962,17 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xam.Plugin.FilePicker/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.dll": {}
+        }
+      },
       "Xamarin.Build.Download/0.4.6": {
         "type": "package",
         "build": {
@@ -1146,6 +1181,7 @@
           "Newtonsoft.Json": "11.0.2",
           "Plugin.FirebasePushNotification": "2.3.5",
           "System.Net.Http": "4.3.3",
+          "Xam.Plugin.FilePicker": "1.1.0",
           "Xamarin.Firebase.Core": "60.1142.1",
           "Xamarin.Forms": "3.1.0.697729"
         },
@@ -1320,6 +1356,17 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xam.Plugin.FilePicker/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.Abstractions.dll": {},
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.dll": {}
+        }
+      },
       "Xamarin.Build.Download/0.4.6": {
         "type": "package",
         "build": {
@@ -1528,6 +1575,7 @@
           "Newtonsoft.Json": "11.0.2",
           "Plugin.FirebasePushNotification": "2.3.5",
           "System.Net.Http": "4.3.3",
+          "Xam.Plugin.FilePicker": "1.1.0",
           "Xamarin.Firebase.Core": "60.1142.1",
           "Xamarin.Forms": "3.1.0.697729"
         },
@@ -2013,6 +2061,60 @@
         "system.net.http.nuspec"
       ]
     },
+    "Xam.Plugin.FilePicker/1.1.0": {
+      "sha512": "ORzNG6dEgdBZnIdmbQCpNB4LSSTjBebwGjb1XZrgfbBGjX9muHBfZeQwOnNRvcGlm6fkylzTj2rDslDA1E/JFA==",
+      "type": "package",
+      "path": "xam.plugin.filepicker/1.1.0",
+      "files": [
+        "lib/MonoAndroid10/Plugin.FilePicker.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.FilePicker.Abstractions.dll.mdb",
+        "lib/MonoAndroid10/Plugin.FilePicker.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.FilePicker.Abstractions.xml",
+        "lib/MonoAndroid10/Plugin.FilePicker.dll",
+        "lib/MonoAndroid10/Plugin.FilePicker.dll.mdb",
+        "lib/MonoAndroid10/Plugin.FilePicker.pdb",
+        "lib/MonoAndroid10/Plugin.FilePicker.xml",
+        "lib/MonoTouch10/Plugin.FilePicker.Abstractions.dll",
+        "lib/MonoTouch10/Plugin.FilePicker.Abstractions.xml",
+        "lib/MonoTouch10/Plugin.FilePicker.dll",
+        "lib/MonoTouch10/Plugin.FilePicker.xml",
+        "lib/UAP10/Plugin.FilePicker.Abstractions.dll",
+        "lib/UAP10/Plugin.FilePicker.Abstractions.pdb",
+        "lib/UAP10/Plugin.FilePicker.Abstractions.xml",
+        "lib/UAP10/Plugin.FilePicker.dll",
+        "lib/UAP10/Plugin.FilePicker.pdb",
+        "lib/UAP10/Plugin.FilePicker.xml",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.Abstractions.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.Abstractions.dll.mdb",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.Abstractions.pdb",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.Abstractions.xml",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.dll.mdb",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.pdb",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.xml",
+        "lib/win8/Plugin.FilePicker.Abstractions.dll",
+        "lib/win8/Plugin.FilePicker.Abstractions.pdb",
+        "lib/win8/Plugin.FilePicker.Abstractions.xml",
+        "lib/win8/Plugin.FilePicker.dll",
+        "lib/win8/Plugin.FilePicker.pdb",
+        "lib/win8/Plugin.FilePicker.xml",
+        "lib/wp8/Plugin.FilePicker.Abstractions.dll",
+        "lib/wp8/Plugin.FilePicker.Abstractions.pdb",
+        "lib/wp8/Plugin.FilePicker.Abstractions.xml",
+        "lib/wp8/Plugin.FilePicker.dll",
+        "lib/wp8/Plugin.FilePicker.pdb",
+        "lib/wp8/Plugin.FilePicker.xml",
+        "lib/wpa81/Plugin.FilePicker.Abstractions.dll",
+        "lib/wpa81/Plugin.FilePicker.Abstractions.pdb",
+        "lib/wpa81/Plugin.FilePicker.Abstractions.xml",
+        "lib/wpa81/Plugin.FilePicker.dll",
+        "lib/wpa81/Plugin.FilePicker.pdb",
+        "lib/wpa81/Plugin.FilePicker.xml",
+        "readme.txt",
+        "xam.plugin.filepicker.1.1.0.nupkg.sha512",
+        "xam.plugin.filepicker.nuspec"
+      ]
+    },
     "Xamarin.Build.Download/0.4.6": {
       "sha512": "MCcNQa7gHQVYDzt6YKSrAjOBNqgb3JQYZDPubtWk2s/eV4eUBicuxZczchcvuk2+US3AOuyFxIcMwnej74dWaA==",
       "type": "package",
@@ -2250,6 +2352,7 @@
       "Plugin.FirebasePushNotification >= 2.3.5",
       "RealTimeChat >= 1.0.0",
       "System.Net.Http >= 4.3.3",
+      "Xam.Plugin.FilePicker >= 1.1.0",
       "Xamarin.Firebase.Core >= 60.1142.1",
       "Xamarin.Forms >= 3.1.0.697729"
     ]
@@ -2276,6 +2379,7 @@
       ],
       "sources": {
         "C:\\Users\\adrian.vergara\\Desktop\\packages": {},
+        "C:\\Users\\adrian.vergara\\Desktop\\packages\\EMDKNuget-master": {},
         "C:\\Users\\adrian.vergara\\Desktop\\packages\\Honeywell-Xamarin-Scanning-SDK-v1.32.07.0010\\libs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -2315,6 +2419,10 @@
           "System.Net.Http": {
             "target": "Package",
             "version": "[4.3.3, )"
+          },
+          "Xam.Plugin.FilePicker": {
+            "target": "Package",
+            "version": "[1.1.0, )"
           },
           "Xamarin.Firebase.Core": {
             "target": "Package",
