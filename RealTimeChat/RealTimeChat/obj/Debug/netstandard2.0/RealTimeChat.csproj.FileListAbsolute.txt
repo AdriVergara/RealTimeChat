@@ -2,7 +2,6 @@ C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat\bin\
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat\bin\Debug\netstandard2.0\RealTimeChat.dll
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat\bin\Debug\netstandard2.0\RealTimeChat.pdb
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat\obj\Debug\netstandard2.0\Views\ListViewPushNotificationsView.xaml.g.cs
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat\obj\Debug\netstandard2.0\Views\LiveChatView.xaml.g.cs
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat\obj\Debug\netstandard2.0\Views\LoginView.xaml.g.cs
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat\obj\Debug\netstandard2.0\RealTimeChat.csproj.CoreCompileInputs.cache

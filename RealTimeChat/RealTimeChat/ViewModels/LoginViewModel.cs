@@ -1,12 +1,7 @@
-﻿using Newtonsoft.Json;
-using RealTimeChat.Models;
+﻿using RealTimeChat.Models;
 using RealTimeChat.Views;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -24,9 +19,9 @@ namespace RealTimeChat.ViewModels
 
         public INavigation NavigationService { get; set; }
 
-        public ICommand ConfirmUser { get; set; }
-        public ICommand ListViewPushNotifications { get; set; }
-        public ICommand TestImageListView { get; set; }
+        //public ICommand ConfirmUser { get; set; }
+        public ICommand LiveChat { get; set; }
+        //public ICommand TestImageListView { get; set; }
 
         private ObservableCollection<UserModel> _usersList;
         public ObservableCollection<UserModel> UsersList
@@ -43,9 +38,8 @@ namespace RealTimeChat.ViewModels
             }
         }
 
-
-        public string UserName { get; set; }
-        public string Password { get; set; }
+        //public string UserName { get; set; }
+        //public string Password { get; set; }
 
         public UserModel selectedIt { get; set; }
 
@@ -55,9 +49,9 @@ namespace RealTimeChat.ViewModels
             //LoadFirebaseDatabase();
 
             NavigationService = _navigationService;
-            ConfirmUser = new Command(async () => await ExecuteConfirmUser());
-            ListViewPushNotifications = new Command(async () => await ExecuteListViewPushNotifications());
-            TestImageListView = new Command(async () => await ExecuteTestImageListView());
+            //ConfirmUser = new Command(async () => await ExecuteConfirmUser());
+            //TestImageListView = new Command(async () => await ExecuteTestImageListView());
+            LiveChat = new Command(async () => await ExecuteLiveChat());
         }
 
         private async Task ExecuteTestImageListView()
@@ -65,19 +59,10 @@ namespace RealTimeChat.ViewModels
             await NavigationService.PushAsync(new TestImageListView(NavigationService));
         }
 
-        public async Task ExecuteListViewPushNotifications()
+        public async Task ExecuteLiveChat()
         {
-            await NavigationService.PushAsync(new ListViewPushNotificationsView(NavigationService, selectedIt, UsersList));
+            await NavigationService.PushAsync(new LiveChatView(NavigationService, selectedIt, UsersList));
         }
-
-        //private async Task LoadFirebaseDatabase()
-        //{
-        //    string content = await _client.GetStringAsync(Url); //Sends a GET request to the specified Uri and returns the response body as a string in an asynchronous operation
-        //    List<MessageModel> messages = JsonConvert.DeserializeObject<List<MessageModel>>(content); //Deserializes or converts JSON String into a collection of Post
-        //    MessagesList = new ObservableCollection<MessageModel>(messages); //Converting the List to ObservalbleCollection of Post
-        //    //MyListView.ItemsSource = _posts; //Assigning the ObservableCollection to MyListView in the XAML of this file
-        //    //base.OnAppearing();
-        //}
 
         private void InitializeUsers()
         {
@@ -100,23 +85,6 @@ namespace RealTimeChat.ViewModels
             UsersList.Add(User1);
             UsersList.Add(User2);
         }
-
-        private async Task ExecuteConfirmUser()
-        {
-            UserModel us = new UserModel();
-
-            if (selectedIt.UserName == "Adri")
-            {
-                us = UsersList[0];
-            }
-            else if (selectedIt.UserName == "Andreu")
-            {
-                us = UsersList[1];
-            }
-
-            //await NavigationService.PushAsync(new LiveChatView(NavigationService, us, UsersList));
-
-            //await NavigationService.PushAsync(new Database3(NavigationService, selectedIt, UsersList));
-        }
+        
     }
 }
