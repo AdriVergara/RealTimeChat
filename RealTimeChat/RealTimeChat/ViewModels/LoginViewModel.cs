@@ -1,5 +1,6 @@
 ﻿using RealTimeChat.Models;
 using RealTimeChat.Views;
+using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Threading.Tasks;
@@ -21,6 +22,8 @@ namespace RealTimeChat.ViewModels
 
         //public ICommand ConfirmUser { get; set; }
         public ICommand LiveChat { get; set; }
+        public ICommand ChatSelection { get; set; }
+        public ICommand ResetUsersList { get; set; }
         //public ICommand TestImageListView { get; set; }
 
         private ObservableCollection<UserModel> _usersList;
@@ -51,39 +54,44 @@ namespace RealTimeChat.ViewModels
             NavigationService = _navigationService;
             //ConfirmUser = new Command(async () => await ExecuteConfirmUser());
             //TestImageListView = new Command(async () => await ExecuteTestImageListView());
-            LiveChat = new Command(async () => await ExecuteLiveChat());
+            //LiveChat = new Command(async () => await ExecuteLiveChat());
+            ChatSelection = new Command(async () => await ExecuteChatSelection());
+            ResetUsersList = new Command(async () => await ExecuteResetUsersList());
         }
 
-        private async Task ExecuteTestImageListView()
+        private async Task ExecuteResetUsersList()
         {
-            await NavigationService.PushAsync(new TestImageListView(NavigationService));
+            InitializeUsers();
         }
 
-        public async Task ExecuteLiveChat()
+        private async Task ExecuteChatSelection()
         {
-            await NavigationService.PushAsync(new LiveChatView(NavigationService, selectedIt, UsersList));
+            await NavigationService.PushAsync(new ChatSelectionView(NavigationService, selectedIt, UsersList));
         }
+
+        //private async Task ExecuteTestImageListView()
+        //{
+        //    await NavigationService.PushAsync(new TestImageListView(NavigationService));
+        //}
+
+        //public async Task ExecuteLiveChat()
+        //{
+        //    await NavigationService.PushAsync(new LiveChatView(NavigationService, selectedIt, UsersList));
+        //}
+
+
 
         private void InitializeUsers()
         {
             UsersList = new ObservableCollection<UserModel>();
 
-            UserModel User1 = new UserModel
-            {
-                Id = 0,
-                UserName = "Adri",
-                Password = "Adri"
-            };
-
-            UserModel User2 = new UserModel
-            {
-                Id = 1,
-                UserName = "Andreu",
-                Password = "Andreu"
-            };
+            UserModel User1 = new UserModel(0, "Adri");
+            UserModel User2 = new UserModel(1, "Andreu");
+            UserModel User3 = new UserModel(2, "Martina");
 
             UsersList.Add(User1);
             UsersList.Add(User2);
+            UsersList.Add(User3);
         }
         
     }

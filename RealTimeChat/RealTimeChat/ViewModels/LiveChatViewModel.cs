@@ -32,6 +32,21 @@ namespace RealTimeChat.ViewModels
 
         public INavigation NavigationService { get; }
 
+        public UserModel _selectedIt { get; set; }
+        public UserModel SelectedIt
+        {
+            get
+            {
+                return _selectedIt;
+            }
+            set
+            {
+                if (_selectedIt == value) return;
+                _selectedIt = value;
+                OnPropertyChanged(nameof(SelectedIt));
+            }
+        }
+
         public string _messageText { get; set; }
         public string MessageText
         {
@@ -47,18 +62,18 @@ namespace RealTimeChat.ViewModels
             }
         }
 
-        public UserModel _user { get; set; }
-        public UserModel User
+        public UserModel _userLogged { get; set; }
+        public UserModel UserLogged
         {
             get
             {
-                return _user;
+                return _userLogged;
             }
             set
             {
-                if (_user == value) return;
-                _user = value;
-                OnPropertyChanged(nameof(User));
+                if (_userLogged == value) return;
+                _userLogged = value;
+                OnPropertyChanged(nameof(UserLogged));
             }
         }
 
@@ -129,11 +144,23 @@ namespace RealTimeChat.ViewModels
 
         IFirebaseClient FiresharpClient { get; set; }
 
-        public LiveChatViewModel(INavigation _navigationService, UserModel _user, ObservableCollection<UserModel> _usersList)
+        public string ChatKey { get; set; }
+        public bool InverseChat { get; set; }
+        public string StreamingKey { get; set; }
+        public string OriginalKey { get; set; }
+
+        public LiveChatViewModel(INavigation _navigationService, UserModel _userLogged, UserModel _selectedIt)
         {
             NavigationService = _navigationService;
 
-            User = _user;
+            MessagesList = new ObservableCollection<MessageModel>();
+
+            UserLogged = _userLogged;
+            SelectedIt = _selectedIt;
+
+            ChatKey = UserLogged.UserName + "_" + SelectedIt.UserName;
+            OriginalKey = ChatKey;
+            InverseChat = false;
 
             config = new FirebaseConfig
             {
@@ -141,21 +168,36 @@ namespace RealTimeChat.ViewModels
                 BasePath = "https://realtimechat-b2228.firebaseio.com/"
             };
 
-            client = new Firebase.Database.FirebaseClient("https://realtimechat-b2228.firebaseio.com/");
+            client = new FirebaseClient("https://realtimechat-b2228.firebaseio.com/");
 
             FiresharpClient = new FireSharp.FirebaseClient(config);
 
             Streaming();
+            getMessage();
 
             SendMessageToChat = new Command(async () => await ExecuteSendMessageToChat());
-            SelectFileToInsert = new Command(async () => await ExecuteSelectFileToInsert());
+            //SelectFileToInsert = new Command(async () => await ExecuteSelectFileToInsert());
             DownloadFile = new Command(async (Param) => await ExecuteDownloadFile(Param));
         }
 
         //Every time the database changes, this function has to update the List of Messages(MessagesList) to load the other messages
         public async Task Streaming()
         {
-            EventStreamResponse response = await FiresharpClient.OnAsync("Chat", (sender, args, context) =>
+
+            EventStreamResponse response;
+
+            string InverseChatKey = "";
+
+            string[] usersKey = ChatKey.Split('_');
+
+            InverseChatKey = usersKey[1] + "_" + usersKey[0];
+
+            response = await FiresharpClient.OnAsync(ChatKey, (sender, args, context) =>
+            {
+                getMessage(); //Refresh() == Read the rtDB and update MessagesList
+            });
+           
+            response = await FiresharpClient.OnAsync(InverseChatKey, (sender, args, context) =>
             {
                 getMessage(); //Refresh() == Read the rtDB and update MessagesList
             });
@@ -173,36 +215,41 @@ namespace RealTimeChat.ViewModels
 
         }
 
-        public async Task ExecuteSelectFileToInsert()
-        {
-            FileData filedata = await CrossFilePicker.Current.PickFile();
+        //public async Task ExecuteSelectFileToInsert()
+        //{
+        //    FileData filedata = await CrossFilePicker.Current.PickFile();
 
-            //Getting the filename and the data info from the image picked
-            FileName = filedata.FileName;
-            FileData = filedata.DataArray;
+        //    //Getting the filename and the data info from the image picked
+        //    FileName = filedata.FileName;
+        //    FileData = filedata.DataArray;
 
-            File newFile = new File(FileName, FileData);
+        //    File newFile = new File(FileName, FileData);
 
-            var MessageToPush = new MessageModel(User.UserName, newFile);
+        //    var MessageToPush = new MessageModel(UserLogged.UserName, newFile);
 
-            var item = await client
-              .Child("Chat")
-              //.WithAuth("<Authentication Token>") // <-- Add Auth token if required. Auth instructions further down in readme.
-              .PostAsync(MessageToPush);
+        //    var item = await client
+        //      .Child("Chat")
+        //      //.WithAuth("<Authentication Token>") // <-- Add Auth token if required. Auth instructions further down in readme.
+        //      .PostAsync(MessageToPush);
 
-            MessagesList.Add(MessageToPush);
-        }
+        //    MessagesList.Add(MessageToPush);
+        //}
 
         public async Task ExecuteSendMessageToChat()
         {
-            var MessageToPush = new MessageModel(MessageText, User.UserName);
+            var MessageToPush = new MessageModel(MessageText, UserLogged.UserName);
             //{
             //    Title = MessageText,
             //    MessageOwner = User.UserName
             //};
 
+            //if (!InverseChat)
+            //{
+            //    ChatKey = UserLogged.UserName + "_" + SelectedIt.UserName;
+            //}
+
             var item = await client
-              .Child("Chat")
+              .Child(ChatKey) //Este Item va dentro del nodo:
               //.WithAuth("<Authentication Token>") // <-- Add Auth token if required. Auth instructions further down in readme.
               .PostAsync(MessageToPush);
 
@@ -211,8 +258,12 @@ namespace RealTimeChat.ViewModels
 
         public async void getMessage()
         {
-            var List = (await client
-                .Child("Chat")
+            //string key = UserLogged.UserName + "_" + SelectedIt.UserName;
+
+            var List = new List<MessageModel>();
+
+            List = (await client
+                .Child(ChatKey)
                 .OnceAsync<MessageModel>())
                 .Select(item =>
                     new MessageModel
@@ -221,6 +272,35 @@ namespace RealTimeChat.ViewModels
                         MessageOwner = item.Object.MessageOwner,
                         File = item.Object.File
                     }).ToList();
+            
+            if (List.Count == 0) //Hasta aquí, no se ha encontrado ningún nodo child en la BD con exactamente el mismo nombre, falta mirar si existe el mismo chat pero si está iniciado por la otra persona.
+            {
+                ChatKey = SelectedIt.UserName + "_" + UserLogged.UserName;
+
+                List = (await client
+                .Child(ChatKey)
+                .OnceAsync<MessageModel>())
+                .Select(item =>
+                    new MessageModel
+                    {
+                        Title = item.Object.Title,
+                        MessageOwner = item.Object.MessageOwner,
+                        File = item.Object.File
+                    }).ToList();
+
+                if (List.Count == 0) //No existe ningun chat entre estas 2 personas
+                {
+                    ChatKey = OriginalKey;
+                }
+                else //Hay un chat entre estas 2 personas, pero en la BD el nombre del "Child" empieza con el nombre del destinatarion del 1r mensaje
+                {
+                    //Do Nothing
+                    InverseChat = true;
+                }
+
+            }
+
+            //StreamingKey = ChatKey;
 
             MessagesList = new ObservableCollection<MessageModel>(List);
 

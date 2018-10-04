@@ -85,3 +85,4 @@ C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.iOS\
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.iOS\bin\iPhone\Debug\Plugin.FilePicker.pdb
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.iOS\obj\iPhone\Debug\optimized\TakePicture.png
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.iOS\obj\iPhone\Debug\optimized\insertFile.png
+C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.iOS\bin\iPhone\Debug\RealTimeChat.dll.mdb

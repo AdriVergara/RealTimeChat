@@ -18,7 +18,12 @@
 
         <StackLayout Orientation="Horizontal" BackgroundColor="AliceBlue">
             <Label Text="User Logged: " />
-            <Label x:Name="UserLogged" Text="{Binding User.UserName}" />
+            <Label x:Name="UserLogged" Text="{Binding UserLogged.UserName}" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" BackgroundColor="AliceBlue">
+            <Label Text="You are chatting with: " />
+            <Label x:Name="UserSelected" Text="{Binding SelectedIt.UserName}" />
         </StackLayout>
 
         <Label x:Name="ImgData" Text="{Binding ImageData}"/>
