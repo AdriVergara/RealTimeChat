@@ -17,8 +17,12 @@ namespace RealTimeChat.Views {
     public partial class ChatSelectionView : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::ChronosSaaS.Widgets.CommandListView MyListView;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(ChatSelectionView));
+            MyListView = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::ChronosSaaS.Widgets.CommandListView>(this, "MyListView");
         }
     }
 }

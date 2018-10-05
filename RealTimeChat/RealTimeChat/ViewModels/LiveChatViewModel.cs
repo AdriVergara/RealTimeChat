@@ -134,19 +134,20 @@ namespace RealTimeChat.ViewModels
             }
         }
 
+        //For Binding
         public ICommand SendMessageToChat { get; set; }
         public ICommand SelectFileToInsert { get; set; }
         public ICommand DownloadFile { get; set; }
 
-        IFirebaseConfig config { get; set; }
+        FirebaseClient client { get; set; } //It's used to post or get messages in the Real Time Database (RTD)
 
-        FirebaseClient client { get; set; }
-
+        //Initial configurations to connect with the RTD
+        IFirebaseConfig config { get; set; }            
         IFirebaseClient FiresharpClient { get; set; }
 
         public string ChatKey { get; set; }
         public bool InverseChat { get; set; }
-        public string StreamingKey { get; set; }
+
         public string OriginalKey { get; set; }
 
         public LiveChatViewModel(INavigation _navigationService, UserModel _userLogged, UserModel _selectedIt)
@@ -158,7 +159,7 @@ namespace RealTimeChat.ViewModels
             UserLogged = _userLogged;
             SelectedIt = _selectedIt;
 
-            ChatKey = UserLogged.UserName + "_" + SelectedIt.UserName;
+            ChatKey = UserLogged.UserName + "_" + SelectedIt.UserName; //RTD Child's Name
             OriginalKey = ChatKey;
             InverseChat = false;
 
@@ -186,17 +187,19 @@ namespace RealTimeChat.ViewModels
 
             EventStreamResponse response;
 
-            string InverseChatKey = "";
+            string InverseChatKey = String.Empty;
 
             string[] usersKey = ChatKey.Split('_');
 
             InverseChatKey = usersKey[1] + "_" + usersKey[0];
 
+            //This will be called when the RTD changes (and the user started the chat)
             response = await FiresharpClient.OnAsync(ChatKey, (sender, args, context) =>
             {
                 getMessage(); //Refresh() == Read the rtDB and update MessagesList
             });
-           
+
+            //This will be called when the RTD changes (and the user didn't start the chat)
             response = await FiresharpClient.OnAsync(InverseChatKey, (sender, args, context) =>
             {
                 getMessage(); //Refresh() == Read the rtDB and update MessagesList
@@ -299,8 +302,6 @@ namespace RealTimeChat.ViewModels
                 }
 
             }
-
-            //StreamingKey = ChatKey;
 
             MessagesList = new ObservableCollection<MessageModel>(List);
 
