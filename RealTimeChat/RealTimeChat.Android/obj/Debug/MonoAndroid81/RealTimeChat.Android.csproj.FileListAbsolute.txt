@@ -133,7 +133,9 @@ C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Andr
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\android\assets\System.Xml.pdb
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Core.pdb
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Forms.Xaml.pdb
+C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat\bin\Debug\netstandard2.0\RealTimeChat.dll
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\linksrc\RealTimeChat.Android.pdb
+C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\bin\Debug\RealTimeChat.dll.mdb
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\linksrc\FormsViewGroup.dll.mdb
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\linksrc\Plugin.FilePicker.Abstractions.dll.mdb
 C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.Android\obj\Debug\MonoAndroid81\linksrc\Plugin.FilePicker.dll.mdb

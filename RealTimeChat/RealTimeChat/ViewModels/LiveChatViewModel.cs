@@ -9,6 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+
+using Firebase.Database;
+using FireSharp.Interfaces;
+using FireSharp.Config;
+using FireSharp.Response;
+using Plugin.FilePicker;
+using Plugin.FilePicker.Abstractions;
+using System.Linq;
 //using Aguacongas.Firebase;
 
 namespace RealTimeChat.ViewModels
@@ -22,87 +30,50 @@ namespace RealTimeChat.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        //FirebaseClient client;
+        public INavigation NavigationService { get; }
 
-        public INavigation NavigationService { get; set; }
-
-        public string MessageText { get; set; }
-
-        public UserModel _user { get; set; }
-        public UserModel User
+        public UserModel _selectedIt { get; set; }
+        public UserModel SelectedIt
         {
             get
             {
-                return _user;
+                return _selectedIt;
             }
             set
             {
-                if (_user == value) return;
-                _user = value;
-                OnPropertyChanged(nameof(User));
+                if (_selectedIt == value) return;
+                _selectedIt = value;
+                OnPropertyChanged(nameof(SelectedIt));
             }
         }
 
-        public string DbJson { get; set; }
-
-        public ICommand SendMessageToChat { get; set; }
-        public ICommand UpdateChat { get; set; }
-
-        //BD : : https://realtimechat-b2228.firebaseio.com/    http://jsonplaceholder.typicode.com/posts
-
-        private const string Url = "https://realtimechat-b2228.firebaseio.com/.json"; //This url is a free public api intended for demos
-        private readonly HttpClient _client = new HttpClient(); //Creating a new instance of HttpClient. (Microsoft.Net.Http)
-
-        public string content { get; set; }
-
-
-
-        //public int Id { get; set; }
-        //public string UserName { get; set; }
-        //public string Password { get; set; }
-
-        public string _textColor { get; set; }
-        public string TextColor
+        public string _messageText { get; set; }
+        public string MessageText
         {
             get
             {
-                return _textColor;
+                return _messageText;
             }
             set
             {
-                if (_textColor == value) return;
-                _textColor = value;
-                OnPropertyChanged(nameof(TextColor));
+                if (_messageText == value) return;
+                _messageText = value;
+                OnPropertyChanged(nameof(MessageText));
             }
         }
 
-        public string _startOrEnd { get; set; }
-        public string StartOrEnd
+        public UserModel _userLogged { get; set; }
+        public UserModel UserLogged
         {
             get
             {
-                return _startOrEnd;
+                return _userLogged;
             }
             set
             {
-                if (_startOrEnd == value) return;
-                _startOrEnd = value;
-                OnPropertyChanged(nameof(StartOrEnd));
-            }
-        }
-
-        public string _messageOwner { get; set; }
-        public string MessageOwner
-        {
-            get
-            {
-                return _messageOwner;
-            }
-            set
-            {
-                if (_messageOwner == value) return;
-                _messageOwner = value;
-                OnPropertyChanged(nameof(MessageOwner));
+                if (_userLogged == value) return;
+                _userLogged = value;
+                OnPropertyChanged(nameof(UserLogged));
             }
         }
 
@@ -121,125 +92,222 @@ namespace RealTimeChat.ViewModels
             }
         }
 
-        private ObservableCollection<UserModel> _usersList;
-        public ObservableCollection<UserModel> UsersList
+        private byte[] _fileData { get; set; }
+        public byte[] FileData
         {
             get
             {
-                return _usersList;
+                return _fileData;
             }
             set
             {
-                if (_usersList == value) return;
-                _usersList = value;
-                OnPropertyChanged(nameof(UsersList));
+                _fileData = value;
+                OnPropertyChanged("FileData");
             }
         }
 
-        public LiveChatViewModel(INavigation _navigationService, UserModel _user, ObservableCollection<UserModel> _usersList)
+        public object _fileSource { get; set; }
+        public object FileSource
         {
-            //client = new FirebaseClient("https://www.firebase.com/");
+            get
+            {
+                return _fileSource;
+            }
+            set
+            {
+                _fileSource = value;
+                OnPropertyChanged("FileSource");
+            }
+        }
 
-            User = _user;
+        private string _fileName { get; set; }
+        public string FileName
+        {
+            get
+            {
+                return _fileName;
+            }
+            set
+            {
+                _fileName = value;
+                OnPropertyChanged("FileName");
+            }
+        }
 
-            content = "";
+        //For Binding
+        public ICommand SendMessageToChat { get; set; }
+        public ICommand SelectFileToInsert { get; set; }
+        public ICommand DownloadFile { get; set; }
 
-            MessagesList = new ObservableCollection<MessageModel>();
-            //client.MaxResponseContentBufferSize = 256000;
+        FirebaseClient client { get; set; } //It's used to post or get messages in the Real Time Database (RTD)
 
-            ExecuteUpdateChat();
+        //Initial configurations to connect with the RTD
+        IFirebaseConfig config { get; set; }            
+        IFirebaseClient FiresharpClient { get; set; }
 
-            UsersList = _usersList;
+        public string ChatKey { get; set; }
+        public bool InverseChat { get; set; }
 
+        public string OriginalKey { get; set; }
+
+        public LiveChatViewModel(INavigation _navigationService, UserModel _userLogged, UserModel _selectedIt)
+        {
             NavigationService = _navigationService;
 
+            MessagesList = new ObservableCollection<MessageModel>();
+
+            UserLogged = _userLogged;
+            SelectedIt = _selectedIt;
+
+            ChatKey = UserLogged.UserName + "_" + SelectedIt.UserName; //RTD Child's Name
+            OriginalKey = ChatKey;
+            InverseChat = false;
+
+            config = new FirebaseConfig
+            {
+                //AuthSecret = "your_firebase_secret",
+                BasePath = "https://realtimechat-b2228.firebaseio.com/"
+            };
+
+            client = new FirebaseClient("https://realtimechat-b2228.firebaseio.com/");
+
+            FiresharpClient = new FireSharp.FirebaseClient(config);
+
+            Streaming();
+            getMessage();
+
             SendMessageToChat = new Command(async () => await ExecuteSendMessageToChat());
-            UpdateChat = new Command(async () => await ExecuteUpdateChat());
+            //SelectFileToInsert = new Command(async () => await ExecuteSelectFileToInsert());
+            DownloadFile = new Command(async (Param) => await ExecuteDownloadFile(Param));
         }
 
-        //Refresh the chat depending on the api messages (to show the received messages), push to api and refresh the chat view
-        private async Task ExecuteSendMessageToChat()
+        //Every time the database changes, this function has to update the List of Messages(MessagesList) to load the other messages
+        public async Task Streaming()
         {
-            //ExecuteUpdateChat();
 
-            content = await _client.GetStringAsync(Url).ConfigureAwait(false); //Sends a GET request to the specified Uri and returns the response body as a string in an asynchronous operation
+            EventStreamResponse response;
 
-            //look if content contains ",null" and delete it (This is beacause there will be a "null" entry if some record is deleted manually from the database and then you update)
-            if (content.Contains(",null"))
+            string InverseChatKey = String.Empty;
+
+            string[] usersKey = ChatKey.Split('_');
+
+            InverseChatKey = usersKey[1] + "_" + usersKey[0];
+
+            //This will be called when the RTD changes (and the user started the chat)
+            response = await FiresharpClient.OnAsync(ChatKey, (sender, args, context) =>
             {
-                content = content.Replace(",null", "");
-            }
+                getMessage(); //Refresh() == Read the rtDB and update MessagesList
+            });
 
-            DbJson = content;
-
-            if (DbJson == "null")
+            //This will be called when the RTD changes (and the user didn't start the chat)
+            response = await FiresharpClient.OnAsync(InverseChatKey, (sender, args, context) =>
             {
-                DbJson = "[]";
-            }
-            
-            List<MessageModel> messages = JsonConvert.DeserializeObject<List<MessageModel>>(DbJson); //Deserializes or converts JSON String into a collection of Post
-            MessagesList = new ObservableCollection<MessageModel>(messages);
+                getMessage(); //Refresh() == Read the rtDB and update MessagesList
+            });
 
-
-            ////////////////////////////////////////
-            ////////////////////////////////////////
-            ////////////////////////////////////////
-
-            //FirebaseOptions fo = new FirebaseOptions();
-            //fo.DatabaseUrl = Url;
-
-            HttpClient hc = new HttpClient();
-            hc.BaseAddress = new Uri(Url);
-
-            //FirebaseClient fc = new FirebaseClient(hc, fo);
-
-            //var h = fc.Equals;
-
-            MessageModel message = new MessageModel(MessageText, User.UserName); //Creating a new instane of Post with a Title Property and its value in a Timestamp format
-            content = JsonConvert.SerializeObject(message); //Serializes or convert the created Post into a JSON String
-            DbJson = DbJson.TrimEnd(']');
-            //str.Trim().Length
-
-            if (DbJson.Trim().Length > 1)
-            {
-                DbJson += ("," + content + "]");
-            }
-            else
-            {
-                DbJson += (content + "]");
-            }
-            await _client.PutAsync(Url, new StringContent(DbJson, Encoding.UTF8, "application/json")); //Send a POST request to the specified Uri as an asynchronous operation and with correct character encoding (utf9) and contenct type (application/json).
-            MessagesList.Add(message); //Updating the UI by inserting an element into the first index of the collection
+            //This disable the streaming function
+            //response.Dispose();
         }
 
-        /// <inheritdoc />
-        /// <summary>
-        /// This method gets called before the UI appears.
-        /// Async and await to get the value of the Task and for user experience
-        /// </summary>
-        public async Task ExecuteUpdateChat()
+        public async Task ExecuteDownloadFile(object data)
         {
-            content = await _client.GetStringAsync(Url).ConfigureAwait(false); //Sends a GET request to the specified Uri and returns the response body as a string in an asynchronous operation
+            var dataFile = data;
 
-            //look if content contains ",null" and delete it (This is beacause there will be a "null" entry if some record is deleted manually from the database and then you update)
-            if (content.Contains(",null"))
-            {
-                content = content.Replace(",null", "");
-            }
+            CrossFilePicker cfp = new CrossFilePicker();
 
-            DbJson = content;
 
-            if (DbJson == "null")
-            {
-                DbJson = "[]";
-            }
-            //else
+        }
+
+        //public async Task ExecuteSelectFileToInsert()
+        //{
+        //    FileData filedata = await CrossFilePicker.Current.PickFile();
+
+        //    //Getting the filename and the data info from the image picked
+        //    FileName = filedata.FileName;
+        //    FileData = filedata.DataArray;
+
+        //    File newFile = new File(FileName, FileData);
+
+        //    var MessageToPush = new MessageModel(UserLogged.UserName, newFile);
+
+        //    var item = await client
+        //      .Child("Chat")
+        //      //.WithAuth("<Authentication Token>") // <-- Add Auth token if required. Auth instructions further down in readme.
+        //      .PostAsync(MessageToPush);
+
+        //    MessagesList.Add(MessageToPush);
+        //}
+
+        public async Task ExecuteSendMessageToChat()
+        {
+            var MessageToPush = new MessageModel(MessageText, UserLogged.UserName);
             //{
-                List<MessageModel> messages = JsonConvert.DeserializeObject<List<MessageModel>>(DbJson); //Deserializes or converts JSON String into a collection of Post
-                MessagesList = new ObservableCollection<MessageModel>(messages); //Converting the List to ObservalbleCollection of Post
-                //await _client.PutAsync(Url, new StringContent(DbJson, Encoding.UTF8, "application/json")); //Send a POST request to the specified Uri as an asynchronous operation and with correct character encoding (utf9) and contenct type (application/json).
+            //    Title = MessageText,
+            //    MessageOwner = User.UserName
+            //};
+
+            //if (!InverseChat)
+            //{
+            //    ChatKey = UserLogged.UserName + "_" + SelectedIt.UserName;
             //}
 
+            var item = await client
+              .Child(ChatKey) //Este Item va dentro del nodo:
+              //.WithAuth("<Authentication Token>") // <-- Add Auth token if required. Auth instructions further down in readme.
+              .PostAsync(MessageToPush);
+
+            MessagesList.Add(MessageToPush);
         }
+
+        public async void getMessage()
+        {
+            //string key = UserLogged.UserName + "_" + SelectedIt.UserName;
+
+            var List = new List<MessageModel>();
+
+            List = (await client
+                .Child(ChatKey)
+                .OnceAsync<MessageModel>())
+                .Select(item =>
+                    new MessageModel
+                    {
+                        Title = item.Object.Title,
+                        MessageOwner = item.Object.MessageOwner,
+                        File = item.Object.File
+                    }).ToList();
+            
+            if (List.Count == 0) //Hasta aquí, no se ha encontrado ningún nodo child en la BD con exactamente el mismo nombre, falta mirar si existe el mismo chat pero si está iniciado por la otra persona.
+            {
+                ChatKey = SelectedIt.UserName + "_" + UserLogged.UserName;
+
+                List = (await client
+                .Child(ChatKey)
+                .OnceAsync<MessageModel>())
+                .Select(item =>
+                    new MessageModel
+                    {
+                        Title = item.Object.Title,
+                        MessageOwner = item.Object.MessageOwner,
+                        File = item.Object.File
+                    }).ToList();
+
+                if (List.Count == 0) //No existe ningun chat entre estas 2 personas
+                {
+                    ChatKey = OriginalKey;
+                }
+                else //Hay un chat entre estas 2 personas, pero en la BD el nombre del "Child" empieza con el nombre del destinatarion del 1r mensaje
+                {
+                    //Do Nothing
+                    InverseChat = true;
+                }
+
+            }
+
+            MessagesList = new ObservableCollection<MessageModel>(List);
+
+            //Call dispose to stop listening for events
+            //response.Dispose();
+        }
+
     }
 }

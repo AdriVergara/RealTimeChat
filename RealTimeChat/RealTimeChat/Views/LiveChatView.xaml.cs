@@ -15,11 +15,11 @@ namespace RealTimeChat.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class LiveChatView : ContentPage
 	{
-        public LiveChatView (INavigation _navigation, UserModel _user, ObservableCollection<UserModel> _usersList)
+        public LiveChatView (INavigation _navigation, UserModel _userLogged, UserModel _selectedIt)
 		{
 			InitializeComponent ();
 
-            BindingContext = new LiveChatViewModel(_navigation, _user, _usersList);
+            BindingContext = new LiveChatViewModel(_navigation, _userLogged, _selectedIt);
 		}
 	}
 }
