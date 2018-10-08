@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-05T11:17:16.661</Modified>
+      <Modified>2018-10-08T07:46:17.850</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\bin\x86\Debug\RealTimeChat.UWP.exe">
       <PackagePath>entrypoint\RealTimeChat.UWP.exe</PackagePath>
-      <Modified>2018-10-05T11:17:13.568</Modified>
+      <Modified>2018-10-08T07:46:08.369</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\.nuget\packages\firebase.database\1.0.0\lib\portable45-net45+win8+wpa81\Firebase.Database.dll">
       <PackagePath>Firebase.Database.dll</PackagePath>
@@ -773,7 +773,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat\bin\Debug\netstandard2.0\RealTimeChat.dll">
       <PackagePath>RealTimeChat.dll</PackagePath>
-      <Modified>2018-10-05T11:16:52.387</Modified>
+      <Modified>2018-10-08T07:45:42.936</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat\Images\insertFile.png">
       <PackagePath>insertFile.png</PackagePath>
@@ -932,11 +932,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-10-05T11:17:13.095</Modified>
+      <Modified>2018-10-08T07:46:07.709</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-10-05T11:17:13.096</Modified>
+      <Modified>2018-10-08T07:46:07.710</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -993,11 +993,11 @@
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-03T09:28:12.722</Modified>
+      <Modified>2018-10-08T07:46:12.039</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\bin\x86\Debug\Core\RealTimeChat.UWP.exe">
       <PackagePath>RealTimeChat.UWP.exe</PackagePath>
-      <Modified>2018-10-05T11:17:16.650</Modified>
+      <Modified>2018-10-08T07:46:17.827</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

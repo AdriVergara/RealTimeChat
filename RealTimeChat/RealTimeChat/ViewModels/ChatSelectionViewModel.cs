@@ -29,7 +29,8 @@ namespace RealTimeChat.ViewModels
         
         public INavigation NavigationService { get; set; }
 
-        public ICommand ConfirmToChat { get; set; }
+        public ICommand ConfirmToChatList { get; set; }
+        public ICommand ConfirmToChatNew { get; set; }
         public ICommand ResetUsersList { get; set; }
         
 
@@ -127,8 +128,14 @@ namespace RealTimeChat.ViewModels
 
             Initialize();
 
-            ConfirmToChat = new Command(async () => await ExecuteConfirmToChat());
+            ConfirmToChatList = new Command(async () => await ExecuteConfirmToChatList());
+            ConfirmToChatNew = new Command(async () => await ExecuteConfirmToChatNew());
             //ResetUsersList = new Command(async () => await ExecuteResetUsersList());
+        }
+
+        private async Task ExecuteConfirmToChatNew()
+        {
+            await NavigationService.PushAsync(new LiveChatView(NavigationService, UserLogged, selectedIt));
         }
 
         private void Initialize()
@@ -216,7 +223,7 @@ namespace RealTimeChat.ViewModels
 
         }
 
-        private async Task ExecuteConfirmToChat()
+        private async Task ExecuteConfirmToChatList()
         {
             UserModel obj = new UserModel(0, ListViewItemSelected.ChatParticipants); 
 

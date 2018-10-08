@@ -8,7 +8,7 @@
 
         <Label Text="Your Chats" HorizontalOptions="Center" Margin="10"/>
 
-        <widgets:CommandListView RowHeight="100" x:Name="MyListView" ItemsSource="{Binding CurrentUserChatsList}" Margin="0,10,0,0" Command="{Binding ConfirmToChat}" SelectedItem="{Binding ListViewItemSelected}">
+        <widgets:CommandListView RowHeight="100" x:Name="MyListView" ItemsSource="{Binding CurrentUserChatsList}" Margin="0,10,0,0" Command="{Binding ConfirmToChatList}" SelectedItem="{Binding ListViewItemSelected}">
             <ListView.ItemTemplate>
                 <DataTemplate>
 
@@ -37,7 +37,7 @@
 
         <Picker Title="User Name" ItemsSource="{Binding UsersList}" ItemDisplayBinding="{Binding UserName}" SelectedItem="{Binding selectedIt}"/>
 
-        <Button Text="Let's Chat!" HorizontalOptions="Center" Command="{Binding ConfirmToChat}"/>
+        <Button Text="Let's Chat!" HorizontalOptions="Center" Command="{Binding ConfirmToChatNew}"/>
 
         <Button Text="Reset List of Users" Command="{Binding ResetUsersList}" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,10" />
 
