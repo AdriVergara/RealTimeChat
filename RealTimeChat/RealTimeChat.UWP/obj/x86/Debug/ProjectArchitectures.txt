@@ -1,1 +1,1 @@
-C:\Users\adrian.vergara\source\repos\RealTimeChat\RealTimeChat\RealTimeChat.UWP\RealTimeChat.UWP.csproj;x86
+C:\RealTimeChat\RealTimeChat\RealTimeChat.UWP\RealTimeChat.UWP.csproj;x86

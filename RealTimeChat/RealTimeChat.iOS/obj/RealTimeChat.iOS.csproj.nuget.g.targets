@@ -5,10 +5,7 @@
   </PropertyGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)xamarin.forms\3.1.0.697729\build\netstandard2.0\Xamarin.Forms.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.forms\3.1.0.697729\build\netstandard2.0\Xamarin.Forms.targets')" />
-    <Import Project="$(NuGetPackageRoot)xamarin.build.download\0.4.6\build\Xamarin.Build.Download.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.build.download\0.4.6\build\Xamarin.Build.Download.targets')" />
-    <Import Project="$(NuGetPackageRoot)xamarin.firebase.ios.instanceid\2.0.8\build\Xamarin.Firebase.iOS.InstanceID.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.firebase.ios.instanceid\2.0.8\build\Xamarin.Firebase.iOS.InstanceID.targets')" />
-    <Import Project="$(NuGetPackageRoot)xamarin.firebase.ios.core\4.0.13.1\build\Xamarin.Firebase.iOS.Core.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.firebase.ios.core\4.0.13.1\build\Xamarin.Firebase.iOS.Core.targets')" />
-    <Import Project="$(NuGetPackageRoot)xamarin.firebase.ios.analytics\4.0.5.1\build\Xamarin.Firebase.iOS.Analytics.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.firebase.ios.analytics\4.0.5.1\build\Xamarin.Firebase.iOS.Analytics.targets')" />
-    <Import Project="$(NuGetPackageRoot)xamarin.firebase.ios.cloudmessaging\2.0.8.1\build\Xamarin.Firebase.iOS.CloudMessaging.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.firebase.ios.cloudmessaging\2.0.8.1\build\Xamarin.Firebase.iOS.CloudMessaging.targets')" />
+    <Import Project="$(NuGetPackageRoot)xamarin.build.download\0.4.11\build\Xamarin.Build.Download.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.build.download\0.4.11\build\Xamarin.Build.Download.targets')" />
+    <Import Project="$(NuGetPackageRoot)xamarin.firebase.ios.instanceid\3.2.1\build\Xamarin.Firebase.iOS.InstanceID.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.firebase.ios.instanceid\3.2.1\build\Xamarin.Firebase.iOS.InstanceID.targets')" />
   </ImportGroup>
 </Project>

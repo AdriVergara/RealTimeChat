@@ -73,19 +73,19 @@
           "lib/Xamarin.iOS10/System.Net.Http.Primitives.dll": {}
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/8.0.3": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
-      "Plugin.FirebasePushNotification/2.3.5": {
+      "Plugin.FirebasePushNotification/2.3.6": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Firebase.iOS.CloudMessaging": "2.0.8.1"
+          "Xamarin.Firebase.iOS.CloudMessaging": "3.1.2"
         },
         "compile": {
           "lib/Xamarin.iOS10/Plugin.FirebasePushNotification.Abstractions.dll": {},
@@ -185,7 +185,7 @@
           "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.dll": {}
         }
       },
-      "Xamarin.Build.Download/0.4.6": {
+      "Xamarin.Build.Download/0.4.11": {
         "type": "package",
         "build": {
           "build/Xamarin.Build.Download.props": {},
@@ -195,60 +195,37 @@
       "Xamarin.Firebase.Core/60.1142.1": {
         "type": "package"
       },
-      "Xamarin.Firebase.iOS.Analytics/4.0.5.1": {
+      "Xamarin.Firebase.iOS.CloudMessaging/3.1.2": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Build.Download": "0.4.6",
-          "Xamarin.Firebase.iOS.Core": "4.0.13.1",
-          "Xamarin.Firebase.iOS.InstanceID": "2.0.8"
-        },
-        "compile": {
-          "lib/Xamarin.iOS10/Firebase.Analytics.dll": {}
-        },
-        "runtime": {
-          "lib/Xamarin.iOS10/Firebase.Analytics.dll": {}
-        },
-        "build": {
-          "build/Xamarin.Firebase.iOS.Analytics.targets": {}
-        }
-      },
-      "Xamarin.Firebase.iOS.CloudMessaging/2.0.8.1": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Build.Download": "0.4.6",
-          "Xamarin.Firebase.iOS.Analytics": "4.0.5.1",
-          "Xamarin.Firebase.iOS.Core": "4.0.13.1",
-          "Xamarin.Firebase.iOS.InstanceID": "2.0.8"
+          "Xamarin.Build.Download": "0.4.11",
+          "Xamarin.Firebase.iOS.Core": "5.1.3",
+          "Xamarin.Firebase.iOS.InstanceID": "3.2.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Firebase.CloudMessaging.dll": {}
         },
         "runtime": {
           "lib/Xamarin.iOS10/Firebase.CloudMessaging.dll": {}
-        },
-        "build": {
-          "build/Xamarin.Firebase.iOS.CloudMessaging.targets": {}
         }
       },
-      "Xamarin.Firebase.iOS.Core/4.0.13.1": {
+      "Xamarin.Firebase.iOS.Core/5.1.3": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Build.Download": "0.4.6"
+          "Xamarin.Build.Download": "0.4.11"
         },
         "compile": {
           "lib/Xamarin.iOS10/Firebase.Core.dll": {}
         },
         "runtime": {
           "lib/Xamarin.iOS10/Firebase.Core.dll": {}
-        },
-        "build": {
-          "build/Xamarin.Firebase.iOS.Core.targets": {}
         }
       },
-      "Xamarin.Firebase.iOS.InstanceID/2.0.8": {
+      "Xamarin.Firebase.iOS.InstanceID/3.2.1": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Build.Download": "0.4.6"
+          "Xamarin.Build.Download": "0.4.11",
+          "Xamarin.Firebase.iOS.Core": "5.1.3"
         },
         "compile": {
           "lib/Xamarin.iOS10/Firebase.InstanceID.dll": {}
@@ -390,10 +367,10 @@
           "FireSharp": "2.0.4",
           "Firebase.Database": "1.0.0",
           "Microsoft.Net.Http": "2.2.29",
-          "Newtonsoft.Json": "11.0.2",
-          "Plugin.FirebasePushNotification": "2.3.5",
+          "Plugin.FirebasePushNotification": "2.3.6",
           "System.Net.Http": "4.3.3",
           "Xam.Plugin.FilePicker": "1.1.0",
+          "Xamarin.Build.Download": "0.4.11",
           "Xamarin.Firebase.Core": "60.1142.1",
           "Xamarin.Forms": "3.1.0.697729"
         },
@@ -477,19 +454,19 @@
           "lib/Xamarin.iOS10/System.Net.Http.Primitives.dll": {}
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/8.0.3": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
-      "Plugin.FirebasePushNotification/2.3.5": {
+      "Plugin.FirebasePushNotification/2.3.6": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Firebase.iOS.CloudMessaging": "2.0.8.1"
+          "Xamarin.Firebase.iOS.CloudMessaging": "3.1.2"
         },
         "compile": {
           "lib/Xamarin.iOS10/Plugin.FirebasePushNotification.Abstractions.dll": {},
@@ -579,7 +556,7 @@
           "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.dll": {}
         }
       },
-      "Xamarin.Build.Download/0.4.6": {
+      "Xamarin.Build.Download/0.4.11": {
         "type": "package",
         "build": {
           "build/Xamarin.Build.Download.props": {},
@@ -589,60 +566,37 @@
       "Xamarin.Firebase.Core/60.1142.1": {
         "type": "package"
       },
-      "Xamarin.Firebase.iOS.Analytics/4.0.5.1": {
+      "Xamarin.Firebase.iOS.CloudMessaging/3.1.2": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Build.Download": "0.4.6",
-          "Xamarin.Firebase.iOS.Core": "4.0.13.1",
-          "Xamarin.Firebase.iOS.InstanceID": "2.0.8"
-        },
-        "compile": {
-          "lib/Xamarin.iOS10/Firebase.Analytics.dll": {}
-        },
-        "runtime": {
-          "lib/Xamarin.iOS10/Firebase.Analytics.dll": {}
-        },
-        "build": {
-          "build/Xamarin.Firebase.iOS.Analytics.targets": {}
-        }
-      },
-      "Xamarin.Firebase.iOS.CloudMessaging/2.0.8.1": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Build.Download": "0.4.6",
-          "Xamarin.Firebase.iOS.Analytics": "4.0.5.1",
-          "Xamarin.Firebase.iOS.Core": "4.0.13.1",
-          "Xamarin.Firebase.iOS.InstanceID": "2.0.8"
+          "Xamarin.Build.Download": "0.4.11",
+          "Xamarin.Firebase.iOS.Core": "5.1.3",
+          "Xamarin.Firebase.iOS.InstanceID": "3.2.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Firebase.CloudMessaging.dll": {}
         },
         "runtime": {
           "lib/Xamarin.iOS10/Firebase.CloudMessaging.dll": {}
-        },
-        "build": {
-          "build/Xamarin.Firebase.iOS.CloudMessaging.targets": {}
         }
       },
-      "Xamarin.Firebase.iOS.Core/4.0.13.1": {
+      "Xamarin.Firebase.iOS.Core/5.1.3": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Build.Download": "0.4.6"
+          "Xamarin.Build.Download": "0.4.11"
         },
         "compile": {
           "lib/Xamarin.iOS10/Firebase.Core.dll": {}
         },
         "runtime": {
           "lib/Xamarin.iOS10/Firebase.Core.dll": {}
-        },
-        "build": {
-          "build/Xamarin.Firebase.iOS.Core.targets": {}
         }
       },
-      "Xamarin.Firebase.iOS.InstanceID/2.0.8": {
+      "Xamarin.Firebase.iOS.InstanceID/3.2.1": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Build.Download": "0.4.6"
+          "Xamarin.Build.Download": "0.4.11",
+          "Xamarin.Firebase.iOS.Core": "5.1.3"
         },
         "compile": {
           "lib/Xamarin.iOS10/Firebase.InstanceID.dll": {}
@@ -784,10 +738,10 @@
           "FireSharp": "2.0.4",
           "Firebase.Database": "1.0.0",
           "Microsoft.Net.Http": "2.2.29",
-          "Newtonsoft.Json": "11.0.2",
-          "Plugin.FirebasePushNotification": "2.3.5",
+          "Plugin.FirebasePushNotification": "2.3.6",
           "System.Net.Http": "4.3.3",
           "Xam.Plugin.FilePicker": "1.1.0",
+          "Xamarin.Build.Download": "0.4.11",
           "Xamarin.Firebase.Core": "60.1142.1",
           "Xamarin.Forms": "3.1.0.697729"
         },
@@ -871,19 +825,19 @@
           "lib/Xamarin.iOS10/System.Net.Http.Primitives.dll": {}
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/8.0.3": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
-      "Plugin.FirebasePushNotification/2.3.5": {
+      "Plugin.FirebasePushNotification/2.3.6": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Firebase.iOS.CloudMessaging": "2.0.8.1"
+          "Xamarin.Firebase.iOS.CloudMessaging": "3.1.2"
         },
         "compile": {
           "lib/Xamarin.iOS10/Plugin.FirebasePushNotification.Abstractions.dll": {},
@@ -973,7 +927,7 @@
           "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.dll": {}
         }
       },
-      "Xamarin.Build.Download/0.4.6": {
+      "Xamarin.Build.Download/0.4.11": {
         "type": "package",
         "build": {
           "build/Xamarin.Build.Download.props": {},
@@ -983,60 +937,37 @@
       "Xamarin.Firebase.Core/60.1142.1": {
         "type": "package"
       },
-      "Xamarin.Firebase.iOS.Analytics/4.0.5.1": {
+      "Xamarin.Firebase.iOS.CloudMessaging/3.1.2": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Build.Download": "0.4.6",
-          "Xamarin.Firebase.iOS.Core": "4.0.13.1",
-          "Xamarin.Firebase.iOS.InstanceID": "2.0.8"
-        },
-        "compile": {
-          "lib/Xamarin.iOS10/Firebase.Analytics.dll": {}
-        },
-        "runtime": {
-          "lib/Xamarin.iOS10/Firebase.Analytics.dll": {}
-        },
-        "build": {
-          "build/Xamarin.Firebase.iOS.Analytics.targets": {}
-        }
-      },
-      "Xamarin.Firebase.iOS.CloudMessaging/2.0.8.1": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Build.Download": "0.4.6",
-          "Xamarin.Firebase.iOS.Analytics": "4.0.5.1",
-          "Xamarin.Firebase.iOS.Core": "4.0.13.1",
-          "Xamarin.Firebase.iOS.InstanceID": "2.0.8"
+          "Xamarin.Build.Download": "0.4.11",
+          "Xamarin.Firebase.iOS.Core": "5.1.3",
+          "Xamarin.Firebase.iOS.InstanceID": "3.2.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Firebase.CloudMessaging.dll": {}
         },
         "runtime": {
           "lib/Xamarin.iOS10/Firebase.CloudMessaging.dll": {}
-        },
-        "build": {
-          "build/Xamarin.Firebase.iOS.CloudMessaging.targets": {}
         }
       },
-      "Xamarin.Firebase.iOS.Core/4.0.13.1": {
+      "Xamarin.Firebase.iOS.Core/5.1.3": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Build.Download": "0.4.6"
+          "Xamarin.Build.Download": "0.4.11"
         },
         "compile": {
           "lib/Xamarin.iOS10/Firebase.Core.dll": {}
         },
         "runtime": {
           "lib/Xamarin.iOS10/Firebase.Core.dll": {}
-        },
-        "build": {
-          "build/Xamarin.Firebase.iOS.Core.targets": {}
         }
       },
-      "Xamarin.Firebase.iOS.InstanceID/2.0.8": {
+      "Xamarin.Firebase.iOS.InstanceID/3.2.1": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Build.Download": "0.4.6"
+          "Xamarin.Build.Download": "0.4.11",
+          "Xamarin.Firebase.iOS.Core": "5.1.3"
         },
         "compile": {
           "lib/Xamarin.iOS10/Firebase.InstanceID.dll": {}
@@ -1178,10 +1109,10 @@
           "FireSharp": "2.0.4",
           "Firebase.Database": "1.0.0",
           "Microsoft.Net.Http": "2.2.29",
-          "Newtonsoft.Json": "11.0.2",
-          "Plugin.FirebasePushNotification": "2.3.5",
+          "Plugin.FirebasePushNotification": "2.3.6",
           "System.Net.Http": "4.3.3",
           "Xam.Plugin.FilePicker": "1.1.0",
+          "Xamarin.Build.Download": "0.4.11",
           "Xamarin.Firebase.Core": "60.1142.1",
           "Xamarin.Forms": "3.1.0.697729"
         },
@@ -1265,19 +1196,19 @@
           "lib/Xamarin.iOS10/System.Net.Http.Primitives.dll": {}
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/8.0.3": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
-      "Plugin.FirebasePushNotification/2.3.5": {
+      "Plugin.FirebasePushNotification/2.3.6": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Firebase.iOS.CloudMessaging": "2.0.8.1"
+          "Xamarin.Firebase.iOS.CloudMessaging": "3.1.2"
         },
         "compile": {
           "lib/Xamarin.iOS10/Plugin.FirebasePushNotification.Abstractions.dll": {},
@@ -1367,7 +1298,7 @@
           "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/Plugin.FilePicker.dll": {}
         }
       },
-      "Xamarin.Build.Download/0.4.6": {
+      "Xamarin.Build.Download/0.4.11": {
         "type": "package",
         "build": {
           "build/Xamarin.Build.Download.props": {},
@@ -1377,60 +1308,37 @@
       "Xamarin.Firebase.Core/60.1142.1": {
         "type": "package"
       },
-      "Xamarin.Firebase.iOS.Analytics/4.0.5.1": {
+      "Xamarin.Firebase.iOS.CloudMessaging/3.1.2": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Build.Download": "0.4.6",
-          "Xamarin.Firebase.iOS.Core": "4.0.13.1",
-          "Xamarin.Firebase.iOS.InstanceID": "2.0.8"
-        },
-        "compile": {
-          "lib/Xamarin.iOS10/Firebase.Analytics.dll": {}
-        },
-        "runtime": {
-          "lib/Xamarin.iOS10/Firebase.Analytics.dll": {}
-        },
-        "build": {
-          "build/Xamarin.Firebase.iOS.Analytics.targets": {}
-        }
-      },
-      "Xamarin.Firebase.iOS.CloudMessaging/2.0.8.1": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Build.Download": "0.4.6",
-          "Xamarin.Firebase.iOS.Analytics": "4.0.5.1",
-          "Xamarin.Firebase.iOS.Core": "4.0.13.1",
-          "Xamarin.Firebase.iOS.InstanceID": "2.0.8"
+          "Xamarin.Build.Download": "0.4.11",
+          "Xamarin.Firebase.iOS.Core": "5.1.3",
+          "Xamarin.Firebase.iOS.InstanceID": "3.2.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Firebase.CloudMessaging.dll": {}
         },
         "runtime": {
           "lib/Xamarin.iOS10/Firebase.CloudMessaging.dll": {}
-        },
-        "build": {
-          "build/Xamarin.Firebase.iOS.CloudMessaging.targets": {}
         }
       },
-      "Xamarin.Firebase.iOS.Core/4.0.13.1": {
+      "Xamarin.Firebase.iOS.Core/5.1.3": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Build.Download": "0.4.6"
+          "Xamarin.Build.Download": "0.4.11"
         },
         "compile": {
           "lib/Xamarin.iOS10/Firebase.Core.dll": {}
         },
         "runtime": {
           "lib/Xamarin.iOS10/Firebase.Core.dll": {}
-        },
-        "build": {
-          "build/Xamarin.Firebase.iOS.Core.targets": {}
         }
       },
-      "Xamarin.Firebase.iOS.InstanceID/2.0.8": {
+      "Xamarin.Firebase.iOS.InstanceID/3.2.1": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Build.Download": "0.4.6"
+          "Xamarin.Build.Download": "0.4.11",
+          "Xamarin.Firebase.iOS.Core": "5.1.3"
         },
         "compile": {
           "lib/Xamarin.iOS10/Firebase.InstanceID.dll": {}
@@ -1572,10 +1480,10 @@
           "FireSharp": "2.0.4",
           "Firebase.Database": "1.0.0",
           "Microsoft.Net.Http": "2.2.29",
-          "Newtonsoft.Json": "11.0.2",
-          "Plugin.FirebasePushNotification": "2.3.5",
+          "Plugin.FirebasePushNotification": "2.3.6",
           "System.Net.Http": "4.3.3",
           "Xam.Plugin.FilePicker": "1.1.0",
+          "Xamarin.Build.Download": "0.4.11",
           "Xamarin.Firebase.Core": "60.1142.1",
           "Xamarin.Forms": "3.1.0.697729"
         },
@@ -1610,10 +1518,11 @@
       ]
     },
     "Microsoft.Bcl/1.1.10": {
-      "sha512": "BT7l/NmBorDS6ZEZhUyzaREaVg0jGrALySl1OM+ffV/Hjh9CSj3Qfa8nvdSoph1VDX9zDVXH/UBZMAJ5SISg3g==",
+      "sha512": "+tTqoh/M1pyL8El3qLy30EcwnAtyvFoDZJtdG9Cbg/WdFbh4N8kyrq198XHuEL7lnJbeD0DRO8jcX5IIOh05cQ==",
       "type": "package",
       "path": "microsoft.bcl/1.1.10",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "License-Stable.rtf",
         "lib/Xamarin.iOS10/_._",
@@ -1701,10 +1610,11 @@
       ]
     },
     "Microsoft.Bcl.Async/1.0.168": {
-      "sha512": "gnEeAJTwzGgyeT6HkRorILuo8QhAZznkyIbgX0xAlTKB7H5iIS4n62WrQZoINNBpYLIC5Npiikqy7SNvxd3ESg==",
+      "sha512": "tUNC02eBwDKpGre0BcNIvblLv1q0Q3DnS/vtkRHj2FE1sXwt386HAudztyl5C0U88hllrqHDvtlz8bK0Y8cHDA==",
       "type": "package",
       "path": "microsoft.bcl.async/1.0.168",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "License-Stable.rtf",
         "lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.dll",
@@ -1756,10 +1666,12 @@
       ]
     },
     "Microsoft.Bcl.Build/1.0.14": {
-      "sha512": "57EJ/NGEDQkIlQs9aO4adkYeaHMdg+pn5D8RfO1ZXQJgHOjTfGH+kWfppEaD6cg0PE2kGn9/GsACcu2LLyJM0g==",
+      "sha512": "cDLKSvNvRa519hplsbSoYqO69TjdDIhfjtKUM0g20/nVROoWsGav9KCI9HtnGjLmdV1+TcUUDhbotcllibjPEA==",
       "type": "package",
       "path": "microsoft.bcl.build/1.0.14",
+      "hasTools": true,
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "License-Stable.rtf",
         "content/net40/_._",
@@ -1776,10 +1688,11 @@
       ]
     },
     "Microsoft.Net.Http/2.2.29": {
-      "sha512": "ls9yfwKS/5F4nBUq34U0HKAke+m4Jy0AFEQVvgHHdP7QccfFQFR1iq99qLms1lfd1OjfvfdBMA7o3bP2IMakwQ==",
+      "sha512": "fc4CPEewJ30Xgal+fSq1lYIBt582A7eKlAL7O4HXiYAiTp2VTnA4osSvk7T2n8aS4xTCPVJusQk3yKLT0XSpkg==",
       "type": "package",
       "path": "microsoft.net.http/2.2.29",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "License-Stable.rtf",
         "lib/Xamarin.iOS10/System.Net.Http.Extensions.XML",
@@ -1843,12 +1756,14 @@
         "microsoft.net.http.nuspec"
       ]
     },
-    "Newtonsoft.Json/11.0.2": {
-      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+    "Newtonsoft.Json/8.0.3": {
+      "sha512": "KGsYQdS2zLH+H8x2cZaSI7e+YZ4SFIbyy1YJQYl6GYBWjf5o4H1A68nxyq+WTyVSOJQ4GqS/DiPE+UseUizgMg==",
       "type": "package",
-      "path": "newtonsoft.json/11.0.2",
+      "path": "newtonsoft.json/8.0.3",
+      "hasTools": true,
       "files": [
-        "LICENSE.md",
+        ".nupkg.metadata",
+        ".signature.p7s",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
         "lib/net35/Newtonsoft.Json.dll",
@@ -1857,35 +1772,41 @@
         "lib/net40/Newtonsoft.Json.xml",
         "lib/net45/Newtonsoft.Json.dll",
         "lib/net45/Newtonsoft.Json.xml",
-        "lib/netstandard1.0/Newtonsoft.Json.dll",
-        "lib/netstandard1.0/Newtonsoft.Json.xml",
-        "lib/netstandard1.3/Newtonsoft.Json.dll",
-        "lib/netstandard1.3/Newtonsoft.Json.xml",
-        "lib/netstandard2.0/Newtonsoft.Json.dll",
-        "lib/netstandard2.0/Newtonsoft.Json.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.11.0.2.nupkg.sha512",
-        "newtonsoft.json.nuspec"
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.xml",
+        "newtonsoft.json.8.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "tools/install.ps1"
       ]
     },
-    "Plugin.FirebasePushNotification/2.3.5": {
-      "sha512": "bLy19B0gO4ZWQxa80ccgCWqktb6v13Vdj/5KBLaepnUdhOg8ejbyGEl7IAkSodipH0etO3Oakj/tqic4GwVqPw==",
+    "Plugin.FirebasePushNotification/2.3.6": {
+      "sha512": "I0gpYTYPpbA8fikkUAV8u1mxmluigKsxls4Vzn7OrcIoqyF/TNgDI55GeJuMrBzI1UrkCoSV1vkZKgZIEXXLOQ==",
       "type": "package",
-      "path": "plugin.firebasepushnotification/2.3.5",
+      "path": "plugin.firebasepushnotification/2.3.6",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "lib/MonoAndroid80/Plugin.FirebasePushNotification.Abstractions.dll",
-        "lib/MonoAndroid80/Plugin.FirebasePushNotification.Abstractions.dll.mdb",
         "lib/MonoAndroid80/Plugin.FirebasePushNotification.Abstractions.pdb",
         "lib/MonoAndroid80/Plugin.FirebasePushNotification.Abstractions.xml",
         "lib/MonoAndroid80/Plugin.FirebasePushNotification.XML",
         "lib/MonoAndroid80/Plugin.FirebasePushNotification.dll",
-        "lib/MonoAndroid80/Plugin.FirebasePushNotification.dll.mdb",
         "lib/MonoAndroid80/Plugin.FirebasePushNotification.pdb",
+        "lib/MonoAndroid81/Plugin.FirebasePushNotification.Abstractions.dll",
+        "lib/MonoAndroid81/Plugin.FirebasePushNotification.Abstractions.pdb",
+        "lib/MonoAndroid81/Plugin.FirebasePushNotification.Abstractions.xml",
+        "lib/MonoAndroid81/Plugin.FirebasePushNotification.XML",
+        "lib/MonoAndroid81/Plugin.FirebasePushNotification.dll",
+        "lib/MonoAndroid81/Plugin.FirebasePushNotification.pdb",
+        "lib/MonoAndroid90/Plugin.FirebasePushNotification.Abstractions.dll",
+        "lib/MonoAndroid90/Plugin.FirebasePushNotification.Abstractions.pdb",
+        "lib/MonoAndroid90/Plugin.FirebasePushNotification.Abstractions.xml",
+        "lib/MonoAndroid90/Plugin.FirebasePushNotification.XML",
+        "lib/MonoAndroid90/Plugin.FirebasePushNotification.dll",
+        "lib/MonoAndroid90/Plugin.FirebasePushNotification.pdb",
         "lib/Xamarin.iOS10/Plugin.FirebasePushNotification.Abstractions.dll",
-        "lib/Xamarin.iOS10/Plugin.FirebasePushNotification.Abstractions.dll.mdb",
         "lib/Xamarin.iOS10/Plugin.FirebasePushNotification.Abstractions.pdb",
         "lib/Xamarin.iOS10/Plugin.FirebasePushNotification.Abstractions.xml",
         "lib/Xamarin.iOS10/Plugin.FirebasePushNotification.XML",
@@ -1896,15 +1817,16 @@
         "lib/netstandard1.0/Plugin.FirebasePushNotification.deps.json",
         "lib/netstandard1.0/Plugin.FirebasePushNotification.dll",
         "lib/netstandard1.0/Plugin.FirebasePushNotification.xml",
-        "plugin.firebasepushnotification.2.3.5.nupkg.sha512",
+        "plugin.firebasepushnotification.2.3.6.nupkg.sha512",
         "plugin.firebasepushnotification.nuspec"
       ]
     },
     "Rx-Core/2.2.5": {
-      "sha512": "1JtSzzsnXVlIP7zPBJLonYST1nsjyAfdNvi1RSp2VFTLnQN0sl/VxNu2oYoRyuuw2G0osE4Gq+H+eRPDEAvF3Q==",
+      "sha512": "DfWVTfW6tvRkkqpnRHKxPIvaRZyDJGADuqrE6J2nwejOQbLRWi0rNUwXkViDWz++25BGDy3iRE5OE6Dv8mJxYQ==",
       "type": "package",
       "path": "rx-core/2.2.5",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net40/System.Reactive.Core.XML",
         "lib/net40/System.Reactive.Core.dll",
@@ -1931,10 +1853,11 @@
       ]
     },
     "Rx-Interfaces/2.2.5": {
-      "sha512": "SZR22mlybXiFYqPKVi8kXX0ZiWKTA0sbkxSQkvpUWrS/jLDEuGiQ/Q0WKRyeqfS4viLhuZfxIvoXkMTWkZa5dA==",
+      "sha512": "FKtG2QfMIeUcfB7r3a89VoAiszX3DTvYETkpC6U0FzWpxRK/mcHyzYOsniDfag+NsDG0P1k1c8yNSefXKp3t2A==",
       "type": "package",
       "path": "rx-interfaces/2.2.5",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net40/System.Reactive.Interfaces.XML",
         "lib/net40/System.Reactive.Interfaces.dll",
@@ -1961,10 +1884,11 @@
       ]
     },
     "Rx-Linq/2.2.5": {
-      "sha512": "Vi2k+I0464HqhgHzoqCjRpQwY2W4xiZWx9FAzegZEN4RcHl6LBI1XOClqrxaKpzknopO1DVRJuLS8QElu6LAhA==",
+      "sha512": "UTeCIu3cWPExxmTzdiVq7SalqTBhUaomBTaAC9LpYPoAopjlFwA3hjVWXoLkGlDc/44wqJemJuEwFP00KphiFg==",
       "type": "package",
       "path": "rx-linq/2.2.5",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net40/System.Reactive.Linq.XML",
         "lib/net40/System.Reactive.Linq.dll",
@@ -1991,20 +1915,22 @@
       ]
     },
     "Rx-Main/2.2.5": {
-      "sha512": "ksv4mn+k+/pPweG4AfM+FvEiGzevxyooWiy6ZABbHIzeOsqUPys5aF3jiDX4k5+nHrgMoZV3PmscBDq6vq1Ueg==",
+      "sha512": "qdQ6qENEiLsp/LRdzZlLlodihWN8VDjwNfWa8c2ELjEHZgTdKzt1V4i61gkHVtFKZXe8Px6KupbMP3pZ+1tusQ==",
       "type": "package",
       "path": "rx-main/2.2.5",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "rx-main.2.2.5.nupkg.sha512",
         "rx-main.nuspec"
       ]
     },
     "Rx-PlatformServices/2.2.5": {
-      "sha512": "wl4i6UVzL0E+qUwOH8bW6yxdsqh8GnK0eLDOaffPw88W0+nFVOh3Z/8coKfna2rsFuF9gg51jlHcTIIuKgvOnA==",
+      "sha512": "pMnNEvJVjT+wuDib+W/bi5hhIYcre7dW5yxvKrJxnR4iKJ1VLA/dY2FTtjDriHGx7OeGn12lQewXlH2oHiWFPA==",
       "type": "package",
       "path": "rx-platformservices/2.2.5",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net40/System.Reactive.PlatformServices.XML",
         "lib/net40/System.Reactive.PlatformServices.dll",
@@ -2031,10 +1957,11 @@
       ]
     },
     "System.Net.Http/4.3.3": {
-      "sha512": "K8Bf1xc41hhxmOp1X3W/y1eRyCwTD5JdEua97gn+7FXCwUeWKK9joR/bTbud07Via/S4W4oYewyzmFeIbt5w4A==",
+      "sha512": "7rCqIbkC/P2+A00NoDH5gnvFhADmX7Dc4INvsOajbU1MVhktE9vZNrjPtF82N6Uo7obK+yzlrPUv/M+snnN/9w==",
       "type": "package",
       "path": "system.net.http/4.3.3",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
@@ -2125,11 +2052,12 @@
         "xam.plugin.filepicker.nuspec"
       ]
     },
-    "Xamarin.Build.Download/0.4.6": {
-      "sha512": "B1Sh8ZyWdahBRoKXKszCiiwg+m3p1xNscYK01vcc12qk2NeBOgRsOm1AStiHGwuDB9TvGFOAEFUtOWq0YN2cvQ==",
+    "Xamarin.Build.Download/0.4.11": {
+      "sha512": "svGAoBnMVQwUbIv1+j7vDypY+2R7jruefJRmVsxhuvSFXMP8dV+yZK3UGuZa3zV5ThKimk9eqHuvRcl/JVipbA==",
       "type": "package",
-      "path": "xamarin.build.download/0.4.6",
+      "path": "xamarin.build.download/0.4.11",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "THIRD-PARTY-NOTICES.txt",
         "build/Mono.Cecil.dll",
@@ -2138,7 +2066,7 @@
         "build/Xamarin.Build.Download.dll",
         "build/Xamarin.Build.Download.props",
         "build/Xamarin.Build.Download.targets",
-        "xamarin.build.download.0.4.6.nupkg.sha512",
+        "xamarin.build.download.0.4.11.nupkg.sha512",
         "xamarin.build.download.nuspec"
       ]
     },
@@ -2151,56 +2079,51 @@
         "xamarin.firebase.core.nuspec"
       ]
     },
-    "Xamarin.Firebase.iOS.Analytics/4.0.5.1": {
-      "sha512": "J5jdcGTo+VqxyigDpvU6mWyae8yFN+wpC1Tet3mBS9Wb0oQpYuP9j5Ia05/3IJEO2gX70Pd12p0Qe70lU8hPBQ==",
+    "Xamarin.Firebase.iOS.CloudMessaging/3.1.2": {
+      "sha512": "d/ZkenBiY9xmEgaPDkr7UdMi4m9JqEDcYumajplQNFSevt6IhtTFlGF7ZpQNjz2/WPI+GkE0pKExNGBBT94cKQ==",
       "type": "package",
-      "path": "xamarin.firebase.ios.analytics/4.0.5.1",
+      "path": "xamarin.firebase.ios.cloudmessaging/3.1.2",
       "files": [
-        "build/Xamarin.Firebase.iOS.Analytics.targets",
-        "lib/Xamarin.iOS10/Firebase.Analytics.dll",
-        "xamarin.firebase.ios.analytics.4.0.5.1.nupkg.sha512",
-        "xamarin.firebase.ios.analytics.nuspec"
-      ]
-    },
-    "Xamarin.Firebase.iOS.CloudMessaging/2.0.8.1": {
-      "sha512": "lgelL/Nk2c5FZRb7j87OpGRN8Q6OSMTEb1t9kTIXJUHdyg7zu5eLfx/WWOsxVqR1BjxbhNqA+RDENwxeLyDOyQ==",
-      "type": "package",
-      "path": "xamarin.firebase.ios.cloudmessaging/2.0.8.1",
-      "files": [
-        "build/Xamarin.Firebase.iOS.CloudMessaging.targets",
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES",
         "lib/Xamarin.iOS10/Firebase.CloudMessaging.dll",
-        "xamarin.firebase.ios.cloudmessaging.2.0.8.1.nupkg.sha512",
+        "xamarin.firebase.ios.cloudmessaging.3.1.2.nupkg.sha512",
         "xamarin.firebase.ios.cloudmessaging.nuspec"
       ]
     },
-    "Xamarin.Firebase.iOS.Core/4.0.13.1": {
-      "sha512": "Qp2LASB6UeFT/cAEsdMrUkGqlB9rhe10mY9/xqRe38UWHXoG7uvgtDQsJI2kHMg5uazgRSFZnt0SzHd7yPmlUA==",
+    "Xamarin.Firebase.iOS.Core/5.1.3": {
+      "sha512": "B676z2x99pBGc0+IEL5r8fCX9KT6xLlzUv6EbY4g87dFrDg/8AeixDAZNwiTV25sstz+qvm7OKVvndGkxM7uqQ==",
       "type": "package",
-      "path": "xamarin.firebase.ios.core/4.0.13.1",
+      "path": "xamarin.firebase.ios.core/5.1.3",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "THIRD-PARTY-NOTICES",
-        "build/Xamarin.Firebase.iOS.Core.targets",
         "lib/Xamarin.iOS10/Firebase.Core.dll",
-        "xamarin.firebase.ios.core.4.0.13.1.nupkg.sha512",
+        "xamarin.firebase.ios.core.5.1.3.nupkg.sha512",
         "xamarin.firebase.ios.core.nuspec"
       ]
     },
-    "Xamarin.Firebase.iOS.InstanceID/2.0.8": {
-      "sha512": "SGG0uH5WDSIjLUhm/qV5dIKsqScffR45PpKNYl5vnXlrdPkiP9xDQK1CBWU1zBFc+orGPMUy+nBctileV9jRQg==",
+    "Xamarin.Firebase.iOS.InstanceID/3.2.1": {
+      "sha512": "gRQppUZPkZpT70WmEjbj45EZZI4C7oPIap0tbIwNCTLAjs71VwwUU6kBbOSs+ONOHOsViYtHjwihVgZNRakfpQ==",
       "type": "package",
-      "path": "xamarin.firebase.ios.instanceid/2.0.8",
+      "path": "xamarin.firebase.ios.instanceid/3.2.1",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "build/Xamarin.Firebase.iOS.InstanceID.targets",
         "lib/Xamarin.iOS10/Firebase.InstanceID.dll",
-        "xamarin.firebase.ios.instanceid.2.0.8.nupkg.sha512",
+        "xamarin.firebase.ios.instanceid.3.2.1.nupkg.sha512",
         "xamarin.firebase.ios.instanceid.nuspec"
       ]
     },
     "Xamarin.Forms/3.1.0.697729": {
-      "sha512": "oYfHpCY9i9wN4vLllsIhzDZY5iOCUtZ3RHxID1fiXOcf7yL9UA16NUsI8opoNmpv1Ru2lTGG9ZKKT1sYS6DLjA==",
+      "sha512": "6y1rnRKVqgRWpGy+mjlgf5cxRYiHsiGS4b51/AJxxkEyf7w1XJGzcLl4wV8Yjpv6/kKxsIBoAgqxIdFElQcNkA==",
       "type": "package",
       "path": "xamarin.forms/3.1.0.697729",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "build/netstandard1.0/Mono.Cecil.Mdb.dll",
         "build/netstandard1.0/Mono.Cecil.Pdb.dll",
@@ -2356,46 +2279,44 @@
       "FireSharp >= 2.0.4",
       "Firebase.Database >= 1.0.0",
       "Microsoft.Net.Http >= 2.2.29",
-      "Newtonsoft.Json >= 11.0.2",
-      "Plugin.FirebasePushNotification >= 2.3.5",
+      "Plugin.FirebasePushNotification >= 2.3.6",
       "RealTimeChat >= 1.0.0",
       "System.Net.Http >= 4.3.3",
       "Xam.Plugin.FilePicker >= 1.1.0",
+      "Xamarin.Build.Download >= 0.4.11",
       "Xamarin.Firebase.Core >= 60.1142.1",
       "Xamarin.Forms >= 3.1.0.697729"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\adrian.vergara\\.nuget\\packages\\": {}
+    "C:\\Users\\Adrián Vergara\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adrian.vergara\\source\\repos\\RealTimeChat\\RealTimeChat\\RealTimeChat.iOS\\RealTimeChat.iOS.csproj",
+      "projectUniqueName": "C:\\RealTimeChat\\RealTimeChat\\RealTimeChat.iOS\\RealTimeChat.iOS.csproj",
       "projectName": "RealTimeChat.iOS",
-      "projectPath": "C:\\Users\\adrian.vergara\\source\\repos\\RealTimeChat\\RealTimeChat\\RealTimeChat.iOS\\RealTimeChat.iOS.csproj",
-      "packagesPath": "C:\\Users\\adrian.vergara\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adrian.vergara\\source\\repos\\RealTimeChat\\RealTimeChat\\RealTimeChat.iOS\\obj\\",
+      "projectPath": "C:\\RealTimeChat\\RealTimeChat\\RealTimeChat.iOS\\RealTimeChat.iOS.csproj",
+      "packagesPath": "C:\\Users\\Adrián Vergara\\.nuget\\packages\\",
+      "outputPath": "C:\\RealTimeChat\\RealTimeChat\\RealTimeChat.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\adrian.vergara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Adrián Vergara\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
       ],
       "sources": {
-        "C:\\Users\\adrian.vergara\\Desktop\\packages": {},
-        "C:\\Users\\adrian.vergara\\Desktop\\packages\\EMDKNuget-master": {},
-        "C:\\Users\\adrian.vergara\\Desktop\\packages\\Honeywell-Xamarin-Scanning-SDK-v1.32.07.0010\\libs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\adrian.vergara\\source\\repos\\RealTimeChat\\RealTimeChat\\RealTimeChat\\RealTimeChat.csproj": {
-              "projectPath": "C:\\Users\\adrian.vergara\\source\\repos\\RealTimeChat\\RealTimeChat\\RealTimeChat\\RealTimeChat.csproj"
+            "C:\\RealTimeChat\\RealTimeChat\\RealTimeChat\\RealTimeChat.csproj": {
+              "projectPath": "C:\\RealTimeChat\\RealTimeChat\\RealTimeChat\\RealTimeChat.csproj"
             }
           }
         }
@@ -2416,13 +2337,9 @@
             "target": "Package",
             "version": "[2.2.29, )"
           },
-          "Newtonsoft.Json": {
-            "target": "Package",
-            "version": "[11.0.2, )"
-          },
           "Plugin.FirebasePushNotification": {
             "target": "Package",
-            "version": "[2.3.5, )"
+            "version": "[2.3.6, )"
           },
           "System.Net.Http": {
             "target": "Package",
@@ -2431,6 +2348,10 @@
           "Xam.Plugin.FilePicker": {
             "target": "Package",
             "version": "[1.1.0, )"
+          },
+          "Xamarin.Build.Download": {
+            "target": "Package",
+            "version": "[0.4.11, )"
           },
           "Xamarin.Firebase.Core": {
             "target": "Package",
